@@ -1,0 +1,18 @@
+/*!
+Theme Name:         dotdev 2017
+Theme URI:          https://dotdev.co
+Description:        Minimal theme based on nosidebar
+Version:            1.0.0
+Author:             Eric L. Barnes
+Author URI:         https://dotdev.co/
+Text Domain:        dotdev-2017
+
+License:            MIT License
+License URI:        http://opensource.org/licenses/MIT
+*/
+
+body {
+  color: red !important;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9zYXNzL3N0eWxlLnNjc3MiLCJzcmMvc2Fzcy9tb2R1bGVzL2luZGV4LnNjc3MiXSwic291cmNlc0NvbnRlbnQiOlsiLyohXG5UaGVtZSBOYW1lOiAgICAgICAgIGRvdGRldiAyMDE3XG5UaGVtZSBVUkk6ICAgICAgICAgIGh0dHBzOi8vZG90ZGV2LmNvXG5EZXNjcmlwdGlvbjogICAgICAgIE1pbmltYWwgdGhlbWUgYmFzZWQgb24gbm9zaWRlYmFyXG5WZXJzaW9uOiAgICAgICAgICAgIDEuMC4wXG5BdXRob3I6ICAgICAgICAgICAgIEVyaWMgTC4gQmFybmVzXG5BdXRob3IgVVJJOiAgICAgICAgIGh0dHBzOi8vZG90ZGV2LmNvL1xuVGV4dCBEb21haW46ICAgICAgICBkb3RkZXYtMjAxN1xuXG5MaWNlbnNlOiAgICAgICAgICAgIE1JVCBMaWNlbnNlXG5MaWNlbnNlIFVSSTogICAgICAgIGh0dHA6Ly9vcGVuc291cmNlLm9yZy9saWNlbnNlcy9NSVRcbiovXG5cbi8vIEluaXRcbkBpbXBvcnQgJ21vZHVsZXMvaW5kZXgnOyIsImJvZHkge1xuICBjb2xvcjogcmVkICFpbXBvcnRhbnQ7XG59Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7OztFQVdFO0FDWEYsQUFBQSxJQUFJLENBQUM7RUFDSCxLQUFLLEVBQUUsY0FBYztDQUN0QiJ9 */

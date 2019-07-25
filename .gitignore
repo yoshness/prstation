@@ -1,0 +1,9 @@
+.idea
+.sass-cache
+.DS_Store
+node_modules
+guide
+package-lock.json
+.env
+*.map
+!.keep
