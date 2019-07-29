@@ -1,0 +1,68 @@
+.article-block {
+  position: relative;
+
+  margin-bottom: 25px;
+
+  color: $color-primary;
+
+  &:hover {
+    .article-block__image {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.article-block__top {
+  overflow: hidden;
+}
+
+.article-block__category {
+  position: absolute;
+  top: 13px;
+  left: 0;
+  text-align: center;
+
+  background-color: $color-primary;
+
+  padding: 4px 22px;
+
+  font-size: 11px;
+  color: $color-white;
+  font-weight: bold;
+
+  z-index: 1;
+}
+
+.article-block__title {
+
+}
+
+.article-block__image {
+  overflow: hidden;
+
+  background-size: cover;
+
+  width: 350px;
+  height: 219px;
+
+  transition: transform $duration $easing;
+}
+
+.article-block__date {
+  display: block;
+
+  margin-top: 10px;
+
+  font-size: 14px;
+  color: $color-lightgray;
+}
+
+.article-block__title {
+  width: 350px;
+
+  font-size: 17px;
+}
+
+.article-block__author {
+  margin-top: 10px;
+}
