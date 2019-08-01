@@ -5,14 +5,32 @@
 .l-index__inner {
   display: flex;
 
-  margin-top: 20px;
+  margin-top: 23px;
 }
 
-.l-index__content {
-  width: 750px;
+.l-index__featured, .l-index__articles {
+  width: 840px;
+}
+
+.l-index__articles {
+  margin-top: 8px;
   margin-bottom: 50px;
 }
 
-.l-index__sidebar {
+.l-index__ads {
+  text-align: center;
 
+  background-color: $color-lightgray;
+
+  width: 280px;
+  height: 610px;
+  margin-left: 20px;
+
+  font-size: 24px;
+  color: $color-white;
+  line-height: 510px;
+}
+
+.l-index__notice {
+  margin: 0 auto;
 }

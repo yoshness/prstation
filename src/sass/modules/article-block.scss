@@ -1,7 +1,6 @@
 .article-block {
+  display: flex;
   position: relative;
-
-  margin-bottom: 25px;
 
   color: $color-primary;
 
@@ -10,31 +9,53 @@
       transform: scale(1.2);
     }
   }
+
+  // MODIFIER
+  &.article-block--featured {
+    display: block;
+
+    .article-block__image-wrapper, .article-block__image {
+      width: 380px;
+      height: 210px;
+    }
+    .article-block__details {
+      margin-top: 7px;
+      margin-left: 0;
+    }
+    .article-block__category {
+      font-size: 13.5px;
+      letter-spacing: -0.08em;
+    }
+    .article-block__title {
+      width: 380px;
+
+      letter-spacing: 0;
+    }
+    .article-block__date, .article-block__author {
+      margin-top: 4px;
+    }
+  }
 }
 
-.article-block__top {
+.article-block__image-wrapper {
   overflow: hidden;
+
+  width: 200px;
+  height: 86px;
+}
+
+.article-block__details {
+  margin-left: 15px;
 }
 
 .article-block__category {
-  position: absolute;
-  top: 13px;
-  left: 0;
-  text-align: center;
-
-  background-color: $color-primary;
-
-  padding: 4px 22px;
+  display: inline-block;
 
   font-size: 11px;
-  color: $color-white;
-  font-weight: bold;
+  color: $color-linkblue;
+  letter-spacing: -0.03em;
 
-  z-index: 1;
-}
-
-.article-block__title {
-
+  text-transform: uppercase;
 }
 
 .article-block__image {
@@ -42,27 +63,36 @@
 
   background-size: cover;
 
-  width: 350px;
-  height: 219px;
+  width: 200px;
+  height: 86px;
 
   transition: transform $duration $easing;
 }
 
-.article-block__date {
-  display: block;
-
-  margin-top: 10px;
+.article-block__date, .article-block__author {
+  display: inline-block;
 
   font-size: 14px;
-  color: $color-lightgray;
+}
+
+.article-block__date {
+  border-right: 1px solid $color-secondary;
+
+  padding-right: 8px;
+
+  color: $color-secondary;
+  line-height: 1.1;
 }
 
 .article-block__title {
-  width: 350px;
-
-  font-size: 17px;
+  font-size: 20px;
+  color: $color-darkgray;
+  letter-spacing: 0.035em;
+  line-height: 1.2;
 }
 
 .article-block__author {
-  margin-top: 10px;
+  margin-left: 5px;
+
+  color: $color-linkblue;
 }

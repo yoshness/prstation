@@ -1,0 +1,38 @@
+.notice {
+  text-align: center;
+
+  border-top: 1px solid $color-lightgray;
+  border-bottom: 1px solid $color-lightgray;
+
+  padding: 12px 0 10px;
+}
+
+.notice__text {
+  display: inline-block;
+
+  font-family: $font-avenir-roman;
+  font-size: 15px;
+}
+
+.notice__button {
+  background-color: $color-linkblue;
+
+  width: 165px;
+  margin-left: 13px;
+  padding: 7px 20px;
+
+  font-size: 12px;
+  color: $color-white;
+  font-weight: bold;
+
+  transition: background-color $duration $easing,
+              color $duration $easing,
+              border-color $duration $easing;
+
+  &:hover {
+    border-color: $color-linkblue;
+    background-color: $color-white;
+
+    color: $color-linkblue;
+  }
+}

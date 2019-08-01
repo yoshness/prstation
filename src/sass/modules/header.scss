@@ -3,27 +3,36 @@
 }
 
 .header__top {
-  display: flex;
-
   background: linear-gradient(to right, rgba(3,52,216,1) 0%, rgba(0,113,188,1) 100%);
 
-  padding: 19px 63px 19px 40px;
+  padding: 14px 0;
 
   color: $color-skyblue;
+}
+
+.header__top-inner {
+  display: flex;
 
   align-items: center;
   justify-content: space-between;
 }
 
-.header__bottom {
-  border-bottom: 1px solid $color-primary;
+.header__top-logo {
+  display: inline-block;
 
-  padding: 7px 0 7px 30px;
+  margin-right: 6px;
+
+  img {
+    width: 155px;
+  }
 }
 
-.header__top-left {
-  font-size: 15px;
-  letter-spacing: 0.035em;
+.header__top-description {
+  display: inline-block;
+  position: relative;
+  top: 2px;
+
+  font-size: 13px;
 }
 
 .header__top-right {
@@ -34,9 +43,9 @@
   border: 1px solid $color-skyblue;
 
   width: 165px;
-  padding: 8px 20px;
+  padding: 7px 20px;
 
-  font-size: 15px;
+  font-size: 12px;
   color: $color-skyblue;
   font-weight: bold;
 
@@ -48,4 +57,10 @@
 
     color: $color-white;
   }
+}
+
+.header__bottom {
+  border-bottom: 1px solid $color-primary;
+
+  padding: 6px 0;
 }

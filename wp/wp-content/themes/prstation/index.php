@@ -20,65 +20,67 @@ get_header();
 
 <main class="l-index">
   <div class="l-index__inner l-container">
-    <div class="l-index__content">
-      <div class="featured">
-        <ul class="featured__list">
-          <li class="featured__list-item">
-            <a class="featured__list-item-link" href="#">
-              <article class="article-block">
-                <div class="article-block__top">
-                  <span class="article-block__category">Apps</span>
+    <div class="l-index__featured">
+      <div class="articles">
+        <ul class="articles__list">
+          <?php for($i=0; $i<4; $i++) { ?>
+          <li class="articles__list-item articles__list-item--featured">
+            <a class="articles__list-item-link" href="#">
+              <article class="article-block article-block--featured">
+                <div class="article-block__image-wrapper">
                   <div class="article-block__image" style="background-image: url('https://placeimg.com/350/219/nature');"></div>
                 </div>
-                <time class="article-block__date" datetime="07-11-19">JUL 11, 2019</time>
-                <h3 class="article-block__title">GrabShare Launches New Enhanced Option for Better Matched Rides</h3>
-                <p class="article-block__author">Grab Holdings Inc.</p>
+                <div class="article-block__details">
+                  <span class="article-block__category">Business</span>
+                  <h3 class="article-block__title">GrabShare Launches New Enhanced Option for Better Transportation</h3>
+                  <time class="article-block__date" datetime="07-11-19">July 11, 2019</time>
+                  <p class="article-block__author">Grab Holdings Inc.</p>
+                </div>
               </article>
             </a>
           </li>
-          <li class="featured__list-item">
-            <a class="featured__list-item-link" href="#">
-              <article class="article-block">
-                <div class="article-block__top">
-                  <span class="article-block__category">Apps</span>
-                  <div class="article-block__image" style="background-image: url('https://placeimg.com/350/219/nature');"></div>
-                </div>
-                <time class="article-block__date" datetime="07-11-19">JUL 11, 2019</time>
-                <h3 class="article-block__title">GrabShare Launches New Enhanced Option for Better Matched Rides</h3>
-                <p class="article-block__author">Grab Holdings Inc.</p>
-              </article>
-            </a>
-          </li>
-          <li class="featured__list-item">
-            <a class="featured__list-item-link" href="#">
-              <article class="article-block">
-                <div class="article-block__top">
-                  <span class="article-block__category">Apps</span>
-                  <div class="article-block__image" style="background-image: url('https://placeimg.com/350/219/nature');"></div>
-                </div>
-                <time class="article-block__date" datetime="07-11-19">JUL 11, 2019</time>
-                <h3 class="article-block__title">GrabShare Launches New Enhanced Option for Better Matched Rides</h3>
-                <p class="article-block__author">Grab Holdings Inc.</p>
-              </article>
-            </a>
-          </li>
-          <li class="featured__list-item">
-            <a class="featured__list-item-link" href="#">
-              <article class="article-block">
-                <div class="article-block__top">
-                  <span class="article-block__category">Apps</span>
-                  <div class="article-block__image" style="background-image: url('https://placeimg.com/350/219/nature');"></div>
-                </div>
-                <time class="article-block__date" datetime="07-11-19">JUL 11, 2019</time>
-                <h3 class="article-block__title">GrabShare Launches New Enhanced Option for Better Matched Rides</h3>
-                <p class="article-block__author">Grab Holdings Inc.</p>
-              </article>
-            </a>
-          </li>
+          <?php } ?>
         </ul>
       </div>
     </div>
-    <aside class="l-index__sidebar sidebar">SIDEBAR HERE</aside>
+    <aside class="l-index__ads">Ads</aside>
+  </div>
+  <div class="l-index__notice l-container">
+    <div class="notice">
+      <p class="notice__text">
+        Want to be heard? Post your Press Release here.
+      </p>
+      <a class="notice__button" href="#">Post your PR</a>
+    </div>
+  </div>
+  <div class="l-index__inner l-container">
+    <div class="l-index__articles">
+      <div class="articles">
+        <h2 class="articles__title">New Press Release</h2>
+        <ul class="articles__list">
+          <?php for($i=0; $i<6; $i++) { ?>
+          <li class="articles__list-item">
+            <a class="articles__list-item-link" href="#">
+              <article class="article-block">
+                <div class="article-block__image-wrapper">
+                  <div class="article-block__image" style="background-image: url('https://placeimg.com/350/219/nature');"></div>
+                </div>
+                <div class="article-block__details">
+                  <span class="article-block__category">Business</span>
+                  <h3 class="article-block__title">GrabShare Launches New Enhanced Option for Better Transportation</h3>
+                  <time class="article-block__date" datetime="07-11-19">July 11, 2019</time>
+                  <p class="article-block__author">Grab Holdings Inc.</p>
+                </div>
+              </article>
+            </a>
+          </li>
+          <?php } ?>
+        </ul>
+        <div class="articles__more">
+          <a class="articles__more-button" href="#">View More</a>
+        </div>
+      </div>
+    </div>
   </div>
 </main>
 
