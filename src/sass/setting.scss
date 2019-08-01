@@ -4,7 +4,7 @@ $font-smoothing: antialiased;
 //auto,optimizeSpeed,optimizeLegibility,geometricPrecision
 $text-rendering: auto;
 
-$base-font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+$base-font-family: "Avenir-Book";
 $base-font-size: 14px;
 $base-font-color: #606060;
 $base-background-color: #fff;
@@ -22,3 +22,81 @@ $color-lightgray: #a0a0a0;
 $duration: .25s;
 $easing: ease-in-out;
 $delay: .35s;
+
+//path
+$path-assets: "/prstation/wp/wp-content/themes/prstation/assets";
+$path-image: "#{$path-assets}/images";
+$path-font: "#{$path-assets}/fonts";
+
+$font-avenir-black: 'Avenir-Black';
+$font-avenir-book: 'Avenir-Book';
+$font-avenir-roman: 'Avenir-Roman';
+$font-gotham-bold: 'Gotham-Bold';
+$font-gotham-light: 'Gotham-Light';
+$font-lato-bold: 'Lato-Bold';
+$font-lato-regular: 'Lato-Regular';
+$font-oswald-extralight: 'Oswald-ExtraLight';
+$font-oswald-medium: 'Oswald-Medium';
+
+@font-face {
+    font-family: 'Avenir-Black';
+    src: url('#{$path-font}/Avenir-Black/Avenir-Black.eot'); /* IE9 Compat Modes */
+    src: url('#{$path-font}/Avenir-Black/Avenir-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('#{$path-font}/Avenir-Black/Avenir-Black.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'Avenir-Book';
+    src: url('#{$path-font}/Avenir-Book/Avenir-Book.eot'); /* IE9 Compat Modes */
+    src: url('#{$path-font}/Avenir-Book/Avenir-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('#{$path-font}/Avenir-Book/Avenir-Book.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'Avenir-Roman';
+    src: url('#{$path-font}/Avenir-Roman/Avenir-Roman.eot'); /* IE9 Compat Modes */
+    src: url('#{$path-font}/Avenir-Roman/Avenir-Roman.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('#{$path-font}/Avenir-Roman/Avenir-Roman.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: url('#{$path-font}/Gotham-Bold/Gotham-Bold.eot'); /* IE9 Compat Modes */
+    src: url('#{$path-font}/Gotham-Bold/Gotham-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('#{$path-font}/Gotham-Bold/Gotham-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'Gotham-Light';
+    src: url('#{$path-font}/Gotham-Light/Gotham-Light.eot'); /* IE9 Compat Modes */
+    src: url('#{$path-font}/Gotham-Light/Gotham-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('#{$path-font}/Gotham-Light/Gotham-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'Lato-Bold';
+    src: url('#{$path-font}/Lato-Bold/Lato-Bold.eot'); /* IE9 Compat Modes */
+    src: url('#{$path-font}/Lato-Bold/Lato-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('#{$path-font}/Lato-Bold/Lato-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url('#{$path-font}/Lato-Regular/Lato-Regular.eot'); /* IE9 Compat Modes */
+    src: url('#{$path-font}/Lato-Regular/Lato-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('#{$path-font}/Lato-Regular/Lato-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'Oswald-ExtraLight';
+    src: url('#{$path-font}/Oswald-ExtraLight/Oswald-ExtraLight.eot'); /* IE9 Compat Modes */
+    src: url('#{$path-font}/Oswald-ExtraLight/Oswald-ExtraLight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('#{$path-font}/Oswald-ExtraLight/Oswald-ExtraLight.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'Oswald-Medium';
+    src: url('#{$path-font}/Oswald-Medium/Oswald-Medium.eot'); /* IE9 Compat Modes */
+    src: url('#{$path-font}/Oswald-Medium/Oswald-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('#{$path-font}/Oswald-Medium/Oswald-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
+}
