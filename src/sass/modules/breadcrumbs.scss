@@ -1,0 +1,45 @@
+.breadcrumbs {
+  margin-top: 5px;
+}
+
+.breadcrumbs__list {
+  list-style: none;
+
+  display: flex;
+}
+
+.breadcrumbs__list-item {
+  &:not(:last-child) {
+    display: flex;
+
+    line-height: 1.9;
+
+    &:after {
+      content: '>';
+
+      padding: 0 6px;
+
+      font-size: 12px;
+      color: #999;
+
+      transition: color $duration $easing;
+    }
+  }
+
+  &:hover {
+    .breadcrumbs__link {
+      color: $color-linkblue;
+    }
+
+    &:after {
+      color: $color-linkblue;
+    }
+  }
+}
+
+.breadcrumbs__link {
+  font-size: 12px;
+  color: #999;
+
+  transition: color $duration $easing;
+}

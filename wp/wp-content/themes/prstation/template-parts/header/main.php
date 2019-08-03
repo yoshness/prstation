@@ -3,7 +3,9 @@
     <div class="header__top-inner l-container">
       <div class="header__top-left">
         <h1 class="header__top-logo">
-          <img src="<?php echo IMAGE_URI; ?>logo.svg" alt="PR Station">
+          <a href="<?php echo HOME_URL; ?>">
+            <img src="<?php echo IMAGE_URI; ?>logo.svg" alt="PR Station">
+          </a>
         </h1>
         <p class="header__top-description">Press Release, News Release Distribution Service in the Philippines</p>
       </div>

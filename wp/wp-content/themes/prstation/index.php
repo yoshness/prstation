@@ -56,7 +56,7 @@ get_header();
   <div class="l-index__inner l-container">
     <div class="l-index__articles">
       <section class="articles">
-        <h2 class="articles__title">New Press Release</h2>
+        <h2 class="articles__title articles__title--uppercase">New Press Release</h2>
         <ul class="articles__list">
           <?php for($i=0; $i<6; $i++) { ?>
           <li class="articles__list-item">
@@ -77,7 +77,7 @@ get_header();
           <?php } ?>
         </ul>
         <div class="articles__more">
-          <a class="articles__more-button" href="#">View More</a>
+          <a class="articles__more-button" href="<?php echo HOME_URL; ?>archive">View More</a>
         </div>
       </section>
     </div>

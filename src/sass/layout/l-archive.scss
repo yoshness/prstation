@@ -1,0 +1,36 @@
+.l-archive {
+  margin-bottom: 120px;
+}
+
+.l-archive__inner {
+  display: flex;
+}
+
+.l-archive__articles {
+  width: 900px;
+  margin-top: 13px;
+
+  .articles {
+    width: 93%;
+  }
+}
+
+.l-archive__sidebar {
+  margin-top: 10px;
+}
+
+.l-archive__ads {
+  display: block;
+  text-align: center;
+
+  background-color: $color-lightgray;
+
+  width: 295px;
+  height: 755px;
+  margin-bottom: 45px;
+  margin-left: 5px;
+
+  font-size: 24px;
+  color: $color-white;
+  line-height: 510px;
+}

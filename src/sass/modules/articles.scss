@@ -9,7 +9,10 @@
   font-size: 33px;
   color: $color-secondary;
 
-  text-transform: uppercase;
+  // MODIFIER
+  &.articles__title--uppercase {
+    text-transform: uppercase;
+  }
 }
 
 .articles__list {
