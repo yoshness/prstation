@@ -32,7 +32,7 @@ get_header();
                 </div>
                 <div class="article-block__details">
                   <span class="article-block__category">Business</span>
-                  <h3 class="article-block__title">GrabShare Launches New Enhanced Option for Better Transportation</h3>
+                  <h3 class="article-block__title">GrabShare Launches New Enhanced Option for Better</h3>
                   <time class="article-block__date" datetime="07-11-19">July 11, 2019</time>
                   <p class="article-block__author">Grab Holdings Inc.</p>
                 </div>
@@ -43,7 +43,7 @@ get_header();
         </ul>
       </div>
     </div>
-    <aside class="l-index__ads">Ads</aside>
+    <a class="l-index__ads" href="#">Ads</a>
   </div>
   <div class="l-index__notice l-container">
     <div class="notice">

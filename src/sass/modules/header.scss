@@ -20,7 +20,7 @@
 .header__top-logo {
   display: inline-block;
 
-  margin-right: 6px;
+  margin-right: 17px;
 
   img {
     width: 155px;
@@ -30,9 +30,10 @@
 .header__top-description {
   display: inline-block;
   position: relative;
-  top: 2px;
+  top: 5px;
 
-  font-size: 13px;
+  font-size: 18px;
+  letter-spacing: -0.03em;
 }
 
 .header__top-right {
@@ -45,7 +46,7 @@
   width: 165px;
   padding: 7px 20px;
 
-  font-size: 12px;
+  font-size: 14px;
   color: $color-skyblue;
   font-weight: bold;
 
@@ -62,5 +63,5 @@
 .header__bottom {
   border-bottom: 1px solid $color-primary;
 
-  padding: 6px 0;
+  padding: 9px 0 5px;
 }

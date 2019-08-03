@@ -9,12 +9,12 @@
 }
 
 .l-index__featured, .l-index__articles {
-  width: 840px;
+  width: 900px;
 }
 
 .l-index__articles {
-  margin-top: 8px;
-  margin-bottom: 50px;
+  margin-top: 13px;
+  margin-bottom: 77px;
 }
 
 .l-index__ads {
@@ -22,9 +22,9 @@
 
   background-color: $color-lightgray;
 
-  width: 280px;
-  height: 610px;
-  margin-left: 20px;
+  width: 295px;
+  height: 755px;
+  margin-left: 5px;
 
   font-size: 24px;
   color: $color-white;
@@ -32,5 +32,5 @@
 }
 
 .l-index__notice {
-  margin: 0 auto;
+  margin: 15px auto 0;
 }

@@ -6,7 +6,7 @@
   margin-bottom: 20px;
 
   font-family: $font-avenir-black;
-  font-size: 26px;
+  font-size: 33px;
   color: $color-secondary;
 
   text-transform: uppercase;
@@ -24,8 +24,8 @@
 .articles__list-item {
   border-bottom: 1px solid $color-bordergray;
 
-  margin-bottom: 17px;
-  padding-bottom: 13px;
+  margin-bottom: 21px;
+  padding-bottom: 21px;
   
   // MODIFIER
   &.articles__list-item--featured {
@@ -44,7 +44,7 @@
 .articles__more {
   text-align: center;
 
-  margin-top: 17px;
+  margin-top: 20px;
 }
 
 .articles__more-button {
@@ -53,10 +53,10 @@
 
   background-color: $color-darkgray;
 
-  width: 137px;
-  padding: 6px 0;
+  width: 170px;
+  padding: 8px 0;
 
-  font-size: 12px;
+  font-size: 14px;
   color: $color-white;
   font-weight: bold;
   letter-spacing: 0.05em;
