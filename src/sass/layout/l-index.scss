@@ -15,6 +15,10 @@
 .l-index__articles {
   margin-top: 13px;
   margin-bottom: 77px;
+
+  .articles {
+    width: 93%;
+  }
 }
 
 .l-index__ads {
@@ -29,6 +33,10 @@
   font-size: 24px;
   color: $color-white;
   line-height: 510px;
+}
+
+.l-index__sidebar {
+  margin-top: 34px;
 }
 
 .l-index__notice {

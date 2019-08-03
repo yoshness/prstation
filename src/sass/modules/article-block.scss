@@ -23,7 +23,6 @@
       margin-left: 0;
     }
     .article-block__category {
-      font-size: 12px;
       letter-spacing: -0.08em;
     }
     .article-block__title {
@@ -43,7 +42,7 @@
 .article-block__image-wrapper {
   overflow: hidden;
 
-  width: 274px;
+  width: 298px;
   height: 135px;
 }
 
@@ -64,9 +63,9 @@
 .article-block__category {
   display: inline-block;
 
-  font-size: 11px;
+  font-size: 12px;
   color: $color-linkblue;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.05em;
 
   text-transform: uppercase;
 }

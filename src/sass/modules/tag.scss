@@ -1,0 +1,14 @@
+.tag {
+  color: $color-secondary;
+  background-color: $color-bordergray;
+  padding: 5px 15px 3px;
+  display: inline-block;
+
+  transition: background-color $duration $easing,
+              color $duration $easing;
+
+  &:hover {
+    background-color: $color-linkblue;
+    color: $color-white;
+  }
+}

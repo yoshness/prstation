@@ -8,7 +8,7 @@
         <p class="header__top-description">Press Release, News Release Distribution Service in the Philippines</p>
       </div>
       <div class="header__top-right">
-        <a class="header__top-link" href="#">Post your PR</a>
+        <a class="header__top-button" href="#">Post your PR</a>
       </div>
     </div>
   </div>

@@ -21,7 +21,7 @@ get_header();
 <main class="l-index">
   <div class="l-index__inner l-container">
     <div class="l-index__featured">
-      <div class="articles">
+      <section class="articles">
         <ul class="articles__list">
           <?php for($i=0; $i<4; $i++) { ?>
           <li class="articles__list-item articles__list-item--featured">
@@ -41,7 +41,7 @@ get_header();
           </li>
           <?php } ?>
         </ul>
-      </div>
+      </section>
     </div>
     <a class="l-index__ads" href="#">Ads</a>
   </div>
@@ -55,7 +55,7 @@ get_header();
   </div>
   <div class="l-index__inner l-container">
     <div class="l-index__articles">
-      <div class="articles">
+      <section class="articles">
         <h2 class="articles__title">New Press Release</h2>
         <ul class="articles__list">
           <?php for($i=0; $i<6; $i++) { ?>
@@ -79,7 +79,10 @@ get_header();
         <div class="articles__more">
           <a class="articles__more-button" href="#">View More</a>
         </div>
-      </div>
+      </section>
+    </div>
+    <div class="l-index__sidebar">
+      <?php get_template_part( 'template-parts/sidebar/main'); ?>
     </div>
   </div>
 </main>
