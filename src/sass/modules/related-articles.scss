@@ -1,0 +1,18 @@
+.related-articles {
+  list-style: none;
+
+  display: flex;
+
+  width: 865px;
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.related-articles__item {
+  width: 33.3%;
+}
+
+.related-articles__item-link {
+  display: block;
+}

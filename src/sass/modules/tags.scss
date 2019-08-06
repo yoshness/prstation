@@ -1,0 +1,14 @@
+.tags {
+  list-style: none;
+
+  display: flex;
+
+  margin: 15px 0 55px;
+  margin-left: -5px;
+
+  flex-wrap: wrap;
+}
+
+.tags-item {
+  margin: 0 4px 10px;
+}

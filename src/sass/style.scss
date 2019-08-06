@@ -22,9 +22,14 @@ License URI:        http://opensource.org/licenses/MIT
 @import 'modules/articles';
 @import 'modules/article-block';
 @import 'modules/notice';
+@import 'modules/tags';
 @import 'modules/tag';
 @import 'modules/breadcrumbs';
+@import 'modules/advertisement';
+@import 'modules/single-body';
+@import 'modules/related-articles';
 
 @import 'layout/container';
 @import 'layout/l-index';
 @import 'layout/l-archive';
+@import 'layout/l-single';

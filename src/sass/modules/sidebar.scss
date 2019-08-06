@@ -22,7 +22,13 @@
 
   margin-bottom: 23px;
   margin-left: 32px;
+}
 
+.sidebar__news-item {
+  display: block;
+}
+
+.sidebar__news-item-link {
   &:before {
     content: counter(news)".";
     counter-increment: news;
@@ -34,13 +40,12 @@
     font-size: 20px;
     color: $color-darkgray;
     font-weight: bold;
-  }
-}
 
-.sidebar__news-item-link {
-  display: block;
+    transition: color $duration $easing;
+  }
+
   &:hover {
-    .sidebar__news-item-title {
+    .sidebar__news-item-title, &:before {
       color: $color-linkblue;
     }
   }
@@ -62,21 +67,6 @@
   line-height: 1.35;
 
   transition: color $duration $easing;
-}
-
-.sidebar__tags {
-  list-style: none;
-
-  display: flex;
-
-  margin: 15px 0 55px;
-  margin-left: -5px;
-
-  flex-wrap: wrap;
-}
-
-.sidebar__tags-item {
-  margin: 0 4px 10px;
 }
 
 .sidebar__contact {

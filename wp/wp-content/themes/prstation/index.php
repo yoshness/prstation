@@ -43,7 +43,7 @@ get_header();
         </ul>
       </section>
     </div>
-    <a class="l-index__ads" href="#">Ads</a>
+    <a class="advertisement" href="#">Ads</a>
   </div>
   <div class="l-index__notice l-container">
     <div class="notice">

@@ -40,7 +40,7 @@ get_header(); ?>
       </section>
     </div>
     <div class="l-archive__sidebar">
-      <a class="l-archive__ads" href="#">Ads</a>
+      <a class="advertisement" href="#">Ads</a>
       <?php get_template_part( 'template-parts/sidebar/main'); ?>
     </div>
   </div>

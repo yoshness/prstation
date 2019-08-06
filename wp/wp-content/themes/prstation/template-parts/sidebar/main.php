@@ -11,29 +11,29 @@
     <?php } ?>
   </ul>
   <h2 class="sidebar__title">Top Keywords</h2>
-  <ul class="sidebar__tags">
-    <li class="sidebar__tags-item">
+  <ul class="tags">
+    <li class="tags-item">
       <a class="tag" href="#">Grab</a>
     </li>
-    <li class="sidebar__tags-item">
+    <li class="tags-item">
       <a class="tag" href="#">Kickstarter</a>
     </li>
-    <li class="sidebar__tags-item">
+    <li class="tags-item">
       <a class="tag" href="#">Ayala</a>
     </li>
-    <li class="sidebar__tags-item">
+    <li class="tags-item">
       <a class="tag" href="#">AI</a>
     </li>
-    <li class="sidebar__tags-item">
+    <li class="tags-item">
       <a class="tag" href="#">Investment</a>
     </li>
-    <li class="sidebar__tags-item">
+    <li class="tags-item">
       <a class="tag" href="#">Grab</a>
     </li>
-    <li class="sidebar__tags-item">
+    <li class="tags-item">
       <a class="tag" href="#">Ayala</a>
     </li>
-    <li class="sidebar__tags-item">
+    <li class="tags-item">
       <a class="tag" href="#">Blockchain</a>
     </li>
   </ul>

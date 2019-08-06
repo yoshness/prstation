@@ -1,0 +1,137 @@
+.l-single {
+  margin-bottom: 165px;
+}
+
+.l-single__inner {
+  display: flex;
+}
+
+.l-single__content {
+  width: 900px;
+  margin-top: 13px;
+
+  .single-body, .l-single__bottom {
+    width: 92.6%;
+  }
+}
+
+.l-single__sidebar {
+  margin-top: 10px;
+}
+
+.l-single__top {
+  margin-bottom: 60px;
+}
+
+.l-single__top-category {
+  font-size: 12px;
+  color: $color-linkblue;
+
+  text-transform: uppercase;
+}
+
+.l-single__top-title {
+  margin-top: 8px;
+
+  font-family: $font-avenir-black;
+  font-size: 36px;
+  color: $color-darkgray;
+  line-height: 1.1;
+}
+
+.l-single__top-date {
+  border-right: 1px solid $color-secondary;
+
+  padding-right: 8px;
+
+  color: $color-secondary;
+  line-height: 1.1;
+}
+
+.l-single__top-author {
+  margin-left: 5px;
+
+  color: $color-linkblue;
+}
+
+.l-single__top-date, .l-single__top-author {
+  display: inline-block;
+
+  margin-top: 4px;
+
+  font-size: 18px;
+}
+
+.l-single__top-eyecatch {
+  background-position: center;
+  background-size: cover;
+
+  width: 830px;
+  height: 495px;
+  margin-top: 28px;
+}
+
+.l-single__bottom {
+  margin-top: 77px;
+}
+
+.l-single__bottom-tags {
+  margin-bottom: 10px;
+}
+
+.l-single__bottom-tags-label {
+  display: inline-block;
+  vertical-align: bottom;
+
+  margin-right: 4px;
+
+  + .tags {
+    display: inline-block;
+
+    margin: 15px 2px 0;
+
+    .tags-item {
+      display: inline-block;
+
+      margin: 0 2px;
+    }
+  }
+}
+
+.l-single__bottom-author {
+  border-top: 1px solid $color-bordergray;
+  border-bottom: 1px solid $color-bordergray;
+
+  padding: 25px 260px 40px 60px;
+}
+
+.l-single__bottom-author-name {
+  display: block;
+
+  margin-bottom: 3px;
+
+  font-size: 21px;
+  color: $color-lightblue;
+  letter-spacing: -0.05em;
+}
+
+.l-single__bottom-author-description {
+  color: $color-secondary;
+  line-height: 1.2;
+}
+
+.l-single__related {
+  margin-top: 70px;
+}
+
+.l-single__related-title {
+  border-bottom: 2px solid $color-lightgray;
+
+  margin-bottom: 27px;
+  padding-bottom: 5px;
+  padding-left: 6px;
+
+  font-size: 24px;
+  color: $color-secondary;
+  letter-spacing: 0.01em;
+}
