@@ -1,1 +1,3 @@
-console.log('And so it begins...')
+import stickyHeader from './modules/sticky-header';
+
+stickyHeader();

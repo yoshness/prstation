@@ -1,5 +1,22 @@
 .header {
+  position: relative;
 
+  background-color: $color-white;
+
+  &.is-sticky {
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+
+    z-index: 99;
+    
+    .header__top-logo {
+      transform: rotateX(360deg);
+
+      transform-style: preserve-3d;
+    }
+  }
 }
 
 .header__top {
@@ -21,6 +38,8 @@
   display: inline-block;
 
   margin-right: 17px;
+
+  transition: transform 1.5s;
 
   img {
     width: 155px;

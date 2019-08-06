@@ -11,5 +11,8 @@
   },
   "devDependencies": {
     "laravel-mix": "0.*"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1"
   }
 }
