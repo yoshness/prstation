@@ -62,8 +62,10 @@
 .article-block__image-wrapper {
   overflow: hidden;
 
-  width: 298px;
+  width: 225px;
   height: 135px;
+
+  flex: none;
 }
 
 .article-block__image {
@@ -112,6 +114,8 @@
   color: $color-darkgray;
   letter-spacing: 0.035em;
   line-height: 1.1;
+
+  word-break: break-word;
 }
 
 .article-block__author {

@@ -324,6 +324,21 @@ require get_template_directory() . '/inc/customizer.php';
 
 
 /*
-Define directory variables
+Define directory variables.
 */
 require get_template_directory() . '/inc/define.php';
+
+/**
+ * Custom queries.
+ */
+require get_template_directory() . '/inc/custom-queries.php';
+
+/**
+ * Custom functions.
+ */
+require get_template_directory() . '/inc/custom-functions.php';
+
+/**
+ * Thumbnail sizes.
+ */
+require get_template_directory() . '/inc/thumbnail.php';
