@@ -17,31 +17,25 @@
   <div class="header__bottom">
     <div class="l-container">
       <nav class="nav">
+        <?php
+          $categories = get_categories( array(
+              'orderby'    => 'name',
+              'parent'     => 0,
+              'exclude'    => 1
+          ) );
+        ?>
         <ul class="nav__list">
           <li class="nav__list-item">
-            <a class="nav__list-item-link" href="#">TOP</a>
+            <a class="nav__list-item-link" href="<?php echo HOME_URL; ?>">TOP</a>
           </li>
+          <?php foreach ( $categories as $category ):
+            $cat_ID        = (int) $category->term_id;
+            $category_name = $category->name;
+          ?>
           <li class="nav__list-item">
-            <a class="nav__list-item-link" href="#">Technology</a>
+            <a class="nav__list-item-link" href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->name; ?></a>
           </li>
-          <li class="nav__list-item">
-            <a class="nav__list-item-link" href="#">App</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="nav__list-item-link" href="#">Business</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="nav__list-item-link" href="#">Event</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="nav__list-item-link" href="#">Fashion</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="nav__list-item-link" href="#">Restaurant</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="nav__list-item-link" href="#">Blogger</a>
-          </li>
+          <?php endforeach; ?>
         </ul>
       </nav>
     </div>

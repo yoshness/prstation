@@ -22,3 +22,26 @@
 
     return new WP_Query( $args );
   }
+
+  function sidebar_most_viewed_article_query() {
+    $args = array(
+      'post_type'      => 'post',
+      'posts_per_page' => 5,
+      'meta_key'       => 'views',
+      'orderby'        => 'meta_value_num',
+      'order'          => 'DESC',
+      'post_status'    => 'publish',
+    );
+
+    return new WP_Query( $args );
+  }
+
+  function sidebar_tag_query() {
+    $args = array(
+      'orderby'    => 'id',
+      'order'    => 'ASC',
+      'hide_empty' => false
+    );
+
+    return get_terms('post_tag', $args);
+  }

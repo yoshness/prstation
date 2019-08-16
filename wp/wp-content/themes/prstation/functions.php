@@ -329,6 +329,16 @@ Define directory variables.
 require get_template_directory() . '/inc/define.php';
 
 /**
+ * Thumbnail sizes.
+ */
+require get_template_directory() . '/inc/thumbnail.php';
+
+/**
+ * Most viewed articles.
+ */
+require get_template_directory() . '/inc/most-views.php';
+
+/**
  * Custom queries.
  */
 require get_template_directory() . '/inc/custom-queries.php';
@@ -337,8 +347,3 @@ require get_template_directory() . '/inc/custom-queries.php';
  * Custom functions.
  */
 require get_template_directory() . '/inc/custom-functions.php';
-
-/**
- * Thumbnail sizes.
- */
-require get_template_directory() . '/inc/thumbnail.php';

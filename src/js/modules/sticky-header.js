@@ -10,7 +10,7 @@ export default function stickyHeader() {
     const $header = $('#js-header'),
           windowScrollTop = CONST.$window.scrollTop();
 
-    if (windowScrollTop >= stickyTrigger) {
+    if (windowScrollTop >= 95) {
       $header.addClass(CONST.STICKY_CLASS);
     } else {
       $header.removeClass(CONST.STICKY_CLASS);

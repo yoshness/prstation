@@ -10724,7 +10724,7 @@ function stickyHeader() {
     var $header = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#js-header'),
         windowScrollTop = __WEBPACK_IMPORTED_MODULE_1__constants___default.a.$window.scrollTop();
 
-    if (windowScrollTop >= stickyTrigger) {
+    if (windowScrollTop >= 95) {
       $header.addClass(__WEBPACK_IMPORTED_MODULE_1__constants___default.a.STICKY_CLASS);
     } else {
       $header.removeClass(__WEBPACK_IMPORTED_MODULE_1__constants___default.a.STICKY_CLASS);
