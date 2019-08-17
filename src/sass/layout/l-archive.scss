@@ -1,20 +1,40 @@
 .l-archive {
   margin-bottom: 120px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 0;
+  }
 }
 
 .l-archive__inner {
   display: flex;
+
+  @include max-screen($breakpoint-mobile) {
+    display: block;
+  }
 }
 
 .l-archive__articles {
   width: 900px;
   margin-top: 13px;
 
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;
+  }
+
   .articles {
     width: 93%;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+    }
   }
 }
 
 .l-archive__sidebar {
   margin: 10px 0 34px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 47px;
+  }
 }

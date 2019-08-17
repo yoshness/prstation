@@ -12,5 +12,7 @@ body {
   color: $base-font-color;
   background-color: $base-background-color;
 
-  min-width: $site-size;
+  @media screen and (min-width: $breakpoint-mobile) {
+    min-width: $site-size;
+  }
 }

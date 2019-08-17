@@ -46,6 +46,10 @@
   color: $color-primary;
   letter-spacing: -0.02em;
 
+  @include max-screen($breakpoint-mobile) {
+    font-size: 12px;
+  }
+
   &:hover {
     font-weight: bold;
   }

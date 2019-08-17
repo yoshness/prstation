@@ -6,18 +6,35 @@
   display: flex;
 
   margin-top: 23px;
+
+  @include max-screen($breakpoint-mobile) {
+    display: block;
+  }
 }
 
 .l-index__featured, .l-index__articles {
   width: 900px;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;
+  }
 }
 
 .l-index__articles {
   margin-top: 13px;
   margin-bottom: 77px;
 
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 50px;
+    margin-bottom: 45px;
+  }
+
   .articles {
     width: 93%;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+    }
   }
 }
 
@@ -27,4 +44,8 @@
 
 .l-index__notice {
   margin: 15px auto 0;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 35px;
+  }
 }

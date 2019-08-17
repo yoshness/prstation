@@ -1,14 +1,22 @@
 .tag {
-  color: $color-secondary;
-  background-color: $color-bordergray;
-  padding: 5px 15px 3px;
   display: inline-block;
+
+  background-color: $color-bordergray;
+
+  padding: 5px 15px 3px;
+
+  color: $color-secondary;
 
   transition: background-color $duration $easing,
               color $duration $easing;
 
+  @include max-screen($breakpoint-mobile) {
+    font-size: 11px;
+  }
+
   &:hover {
     background-color: $color-linkblue;
+
     color: $color-white;
   }
 }

@@ -5,6 +5,10 @@
   border-bottom: 1px solid $color-lightgray;
 
   padding: 17px 0 11px;
+
+  @include max-screen($breakpoint-mobile) {
+    padding-top: 7px;
+  }
 }
 
 .notice__text {
@@ -13,6 +17,12 @@
   font-family: $font-avenir-roman;
   font-size: 19px;
   letter-spacing: -0.005em;
+
+  @include max-screen($breakpoint-mobile) {
+    display: block;
+
+    font-size: 12px;
+  }
 }
 
 .notice__button {
@@ -33,6 +43,15 @@
   transition: background-color $duration $easing,
               color $duration $easing,
               border-color $duration $easing;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 110px;
+    margin-top: 3px;
+    margin-left: 0;
+    padding: 7px 20px 4px;
+
+    font-size: 11px;
+  }
 
   &:hover {
     border-color: $color-linkblue;

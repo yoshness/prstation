@@ -2,6 +2,10 @@
   background-color: $color-linkblue;
 
   padding: 15px 0;
+
+  @include max-screen($breakpoint-mobile) {
+    padding-bottom: 5px;
+  }
 }
 
 .footer__inner {
@@ -16,15 +20,33 @@
   height: 0;
 
   flex-basis: 100%;
+  @include max-screen($breakpoint-mobile) {
+    display: none;
+  }
 }
 
 .footer__logo {
+  @include max-screen($breakpoint-mobile) {
+    margin: 0 auto;
+
+    order: 1;
+  }
   img {
     width: 155px;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100px;
+    }
   }
 }
 
 .footer__notice {
+  @include max-screen($breakpoint-mobile) {
+    margin-top: -7px;
+    margin-bottom: 12px;
+
+    order: 0;
+  }
 }
 
 .footer__notice-text {
@@ -35,6 +57,10 @@
   font-family: $font-avenir-roman;
   font-size: 16px;
   color: $color-skyblue;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 11px;
+  }
 }
 
 .footer__notice-button {
@@ -47,6 +73,13 @@
 
   transition: color $duration $easing,
               border-color $duration $easing;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 88px;
+    padding: 4px 10px;
+
+    font-size: 11px;
+  }
 
   &:hover {
     border-color: $color-white;
@@ -63,10 +96,21 @@
   margin-top: 10px;
 
   justify-content: space-between;
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 3px;
+
+    order: 2;
+    flex-basis: 100%;
+    justify-content: center;
+  }
 }
 
 .footer__sns-item {
   margin: 0 10px;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 12px;
+  }
 
   &:first-child {
     margin-left: 0;
@@ -86,10 +130,19 @@
   margin: 30px auto 20px;
 
   justify-content: space-between;
+  @include max-screen($breakpoint-mobile) {
+    margin: 10px auto;
+
+    order: 3;
+  }
 }
 
 .footer__links-item {
   margin: 0 30px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin: 0 12px;
+  }
 
   &:first-child {
     margin-left: 0;
@@ -100,6 +153,10 @@
     color: $color-skyblue;
 
     transition: color $duration $easing;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 11px;
+    }
 
     &:hover {
       color: $color-white;
@@ -112,4 +169,10 @@
 
   font-size: 17px;
   color: $color-secondary;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 11px;
+
+    order: 4;
+  }
 }

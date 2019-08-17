@@ -53,6 +53,10 @@
 
   font-size: 18px;
   letter-spacing: -0.03em;
+
+  @include max-screen($breakpoint-mobile) {
+    display: none;
+  }
 }
 
 .header__top-right {
@@ -82,4 +86,8 @@
   border-bottom: 1px solid $color-bordergray;
 
   padding: 9px 0 5px;
+
+  @include max-screen($breakpoint-mobile) {
+    padding: 3px 0;
+  }
 }

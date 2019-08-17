@@ -1,6 +1,11 @@
 .sidebar {
   width: 295px;
   margin-left: 5px;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 .sidebar__title {
@@ -8,6 +13,10 @@
 
   font-size: 24px;
   color: $color-secondary;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 18px;
+  }
 }
 
 .sidebar__news {
@@ -15,6 +24,11 @@
   counter-reset: news;
 
   margin: 13px 0 45px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 4px;
+    margin-bottom: 25px;
+  }
 }
 
 .sidebar__news-item {
@@ -22,10 +36,11 @@
 
   margin-bottom: 23px;
   margin-left: 32px;
-}
 
-.sidebar__news-item {
-  display: block;
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 10px;
+    margin-left: 15px;
+  }
 }
 
 .sidebar__news-item-link {
@@ -42,6 +57,13 @@
     font-weight: bold;
 
     transition: color $duration $easing;
+
+    @include max-screen($breakpoint-mobile) {
+      top: 17px;
+      left: -14px;
+
+      font-size: 14px;
+    }
   }
 
   &:hover {
@@ -57,6 +79,10 @@
   letter-spacing: -0.05em;
 
   text-transform: uppercase;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 11px;
+  }
 }
 
 .sidebar__news-item-title {
@@ -67,6 +93,10 @@
   line-height: 1.35;
 
   transition: color $duration $easing;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 14px;
+  }
 }
 
 .sidebar__contact {
@@ -75,6 +105,10 @@
   border: 2px solid $color-lightestgray;
 
   padding: 34px 22px;
+
+  @include max-screen($breakpoint-mobile) {
+    padding: 25px 10px;
+  }
 }
 
 .sidebar__contact-description {
@@ -82,6 +116,10 @@
   color: $color-darkgray;
   letter-spacing: -0.015em;
   line-height: 1.2;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 14px;
+  }
 }
 
 .sidebar__contact-button {
@@ -97,6 +135,12 @@
   color: $color-white;
 
   transition: background-color $duration $easing;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 110px;
+
+    font-size: 12px;
+  }
 
   &:hover {
     background-color: $color-linkblue;

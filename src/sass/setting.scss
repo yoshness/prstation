@@ -29,6 +29,9 @@ $duration: .25s;
 $easing: ease-in-out;
 $delay: .35s;
 
+//breakpoints
+$breakpoint-mobile: 767px;
+
 //path
 $path-assets: "/prstation/wp/wp-content/themes/prstation/assets";
 $path-image: "#{$path-assets}/images";
