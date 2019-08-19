@@ -31,7 +31,7 @@
   <ul class="tags">
     <?php foreach($terms_tag as $tag): ?>
     <li class="tags-item">
-      <a class="tag" href="<?php echo get_term_link($tag->slug, $tag->taxonomy); ?>"><?php echo $tag->name; ?></a>
+      <a class="tag-link" href="<?php echo get_term_link($tag->slug, $tag->taxonomy); ?>"><?php echo $tag->name; ?></a>
     </li>
     <?php endforeach; ?>
   </ul>

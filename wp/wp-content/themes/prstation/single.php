@@ -19,7 +19,6 @@ get_header(); ?>
       $mainCategoryName = !empty($category[0]->name) ? $category[0]->name : 'preview';
     ?>
     <?php include( locate_template( 'template-parts/breadcrumbs.php', false, false ) ); ?>
-    <!-- <?php get_template_part( 'template-parts/breadcrumbs'); ?> -->
   </div>
   <div class="l-single__inner l-container">
     <section class="l-single__content">
@@ -53,7 +52,7 @@ get_header(); ?>
       		<ul class="tags">
             <?php foreach($terms_tag as $tag): ?>
             <li class="tags-item">
-              <a class="tag" href="<?php echo get_term_link($tag->slug, $tag->taxonomy); ?>"><?php echo $tag->name; ?></a>
+              <a class="tag-link" href="<?php echo get_term_link($tag->slug, $tag->taxonomy); ?>"><?php echo $tag->name; ?></a>
             </li>
             <?php endforeach; ?>
 				  </ul>

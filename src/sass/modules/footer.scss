@@ -27,9 +27,10 @@
 
 .footer__logo {
   @include max-screen($breakpoint-mobile) {
-    margin: 0 auto;
+    text-align: center;
 
     order: 1;
+    flex-basis: 100%;
   }
   img {
     width: 155px;
@@ -42,8 +43,7 @@
 
 .footer__notice {
   @include max-screen($breakpoint-mobile) {
-    margin-top: -7px;
-    margin-bottom: 12px;
+    margin: -7px auto 12px;
 
     order: 0;
   }
@@ -134,6 +134,8 @@
     margin: 10px auto;
 
     order: 3;
+    flex-basis: 100%;
+    justify-content: center;
   }
 }
 
