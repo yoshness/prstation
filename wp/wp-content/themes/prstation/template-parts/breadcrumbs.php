@@ -1,10 +1,15 @@
+<?php $categoryUrl = HOME_URL.'category/'.strtolower($mainCategoryName); ?>
+
 <div class="breadcrumbs">
   <ol class="breadcrumbs__list">
     <li class="breadcrumbs__list-item">
       <a class="breadcrumbs__link" href="<?php echo HOME_URL; ?>">TOP</a>
     </li>
     <li class="breadcrumbs__list-item">
-      <a class="breadcrumbs__link" href="#">Technology</a>
+      <a class="breadcrumbs__link" href="<?php echo $categoryUrl?>"><?php echo $mainCategoryName; ?></a>
+    </li>
+    <li class="breadcrumbs__list-item">
+      <a class="breadcrumbs__link" href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a>
     </li>
   </ol>
 </div>

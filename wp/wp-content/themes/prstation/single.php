@@ -14,104 +14,93 @@ get_header(); ?>
 
 <main class="l-single">
   <div class="l-single__breadcrumbs l-container">
-    <?php get_template_part( 'template-parts/breadcrumbs'); ?>
+    <?php
+      $category         = get_the_category( $post->ID );
+      $mainCategoryName = !empty($category[0]->name) ? $category[0]->name : 'preview';
+    ?>
+    <?php include( locate_template( 'template-parts/breadcrumbs.php', false, false ) ); ?>
+    <!-- <?php get_template_part( 'template-parts/breadcrumbs'); ?> -->
   </div>
   <div class="l-single__inner l-container">
     <section class="l-single__content">
       <div class="l-single__top">
-      	<span class="l-single__top-category">TECHNOLOGY</span>
-      	<h1 class="l-single__top-title">GrabShare Launches New Enhanced Option for Better Transportation for Riders</h1>
-      	<time class="l-single__top-date" datetime="07-03-19">July 3, 2019</time>
-        <p class="l-single__top-author">Grab Holdings Inc.</p>
-				<div class="l-single__top-eyecatch" style="background-image: url('https://placeimg.com/830/495/nature');"></div>
+      	<span class="l-single__top-category"><?php echo $mainCategoryName; ?></span>
+        <?php $title = str_replace("　", "<br>", get_the_title()); ?>
+      	<h1 class="l-single__top-title"><?php echo $title; ?></h1>
+      	<time class="l-single__top-date" datetime="<?php the_time('Y-m-d');?>"><?php the_time('M d, Y'); ?></time>
+        <?php if ( have_posts() ) : ?>
+          <?php while ( have_posts() ) : the_post(); ?>
+          <p class="l-single__top-author"><?php echo get_the_author_meta('display_name'); ?></p>
+          <?php endwhile; ?>
+        <?php endif; ?>
+				<div class="l-single__top-eyecatch" style="background-image: url(<?php echo get_eyecatch_data( get_the_ID(), 'article_size' ); ?>)"></div>
       </div>
       <div class="single-body">
-      	<p>Grab, the leading super app in Southeast Asia, today signed a Memorandum of Understanding with MENDAKI Social Enterprise Network Singapore (SENSE), the employment and training arm of YAYASAN MENDAKI, pioneer self-help group to the Malay-Muslim community. The partnership underscores both parties’ support to SENSE’s job seekers who are interested in becoming Grab driver-partners through dedicated on-boarding and training programmes, as well as enabling Grab’s existing pool of driver-partners who are seeking other forms of gainful employment with the opportunity to upskill and re-skill through SENSE’s employment facilitation services. The partnership also seeks to actively engage the community at-large by providing easier access to economic opportunities and skills for ongoing career development.</p>
-				<p>The MoU signing ceremony was graced by Guest-of-Honour Mr Zaqy Mohamad, Minister of State, Ministry of National Development & Ministry of Manpower and Deputy Chairman of MENDAKI. Mr. Yee Wee Tang, Country Head for Grab Singapore and Mohamad Faiz Selamat, Executive Director of MENDAKI SENSE, were also present to launch the partnership. The signing of the MOU was done at a Hari Raya celebration event, co-organised by Grab and National Private Hire Vehicle Association and (NPHVA). </p>
-				<h2>H2 Lorem Ipsum</h2>
-				<p>The MoU signing ceremony was graced by Guest-of-Honour Mr Zaqy Mohamad, Minister of State, Ministry of National Development & Ministry of Manpower and Deputy Chairman of MENDAKI. Mr. Yee Wee Tang, Country Head for Grab Singapore and Mohamad Faiz Selamat, Executive Director of MENDAKI SENSE</p>
-				<h3>H3 Lorem Ipsum Dolor set Amet</h3>
-				<p>The MoU signing ceremony was graced by Guest-of-Honour Mr Zaqy Mohamad, Minister of State, Ministry of National Development & Ministry of Manpower and Deputy Chairman of MENDAKI. Mr. Yee Wee Tang, Country Head for Grab Singapore and Mohamad Faiz Selamat, Executive Director of MENDAKI SENSE</p>
-				<h4>H4 Lorem Ipsum Dolor set Amet</h4>
-				<p>SENSE’s job seekers who are interested in becoming Grab driver-partners through dedicated on-boarding and training programmes, as well as enabling Grab’s existing pool of driver-partners who are seeking other forms of gainful employment with the opportunity to upskill and re-skill through SENSE’s employment facilitation services. The partnership also seeks to actively engage the community at-large by providing easier access to economic opportunities and skills for ongoing </p>
-				<blockquote>‘Stay hungry, Stay foolish,’ said Steve, and his words became my torch to light my way.</blockquote>
-				<p>SENSE’s job seekers who are interested in becoming Grab driver-partners through dedicated on-boarding and training programmes, as well as enabling Grab’s existing pool of driver-partners who are seeking other forms of gainful employment with the opportunity to upskill and re-skill through SENSE’s employment facilitation services. The partnership also seeks to actively engage the community at-large by providing easier access to economic opportunities and skills for ongoing career development.</p>
-				<ul>
-					<li>List 1</li>
-					<li>List 2</li>
-					<li>List 3</li>
-				</ul>
-				<ol>
-					<li>List with number</li>
-					<li>List with number</li>
-					<li>List with number</li>
-				</ol>
-				<iframe width="830" height="430" src="https://www.youtube.com/embed/y6120QOlsfU?autoplay=1" frameborder="0"></iframe>
-				<table>
-					<tr>
-						<td>Table</td>
-						<td>Table</td>
-						<td>Table</td>
-						<td>Table</td>
-					</tr>
-					<tr>
-						<td>Table</td>
-						<td>Table</td>
-						<td>Table</td>
-						<td>Table</td>
-					</tr>
-					<tr>
-						<td>Table</td>
-						<td>Table</td>
-						<td>Table</td>
-						<td>Table</td>
-					</tr>
-				</table>
+        <?php if ( have_posts() ) : ?>
+          <?php while ( have_posts() ) : the_post(); ?>
+              <?php the_content(); ?>
+          <?php endwhile; ?>
+        <?php endif; ?>
       </div>
       <div class="l-single__bottom">
       	<div class="l-single__bottom-tags">
       		<label class="l-single__bottom-tags-label">Keywords:</label>
+          <?php
+            $terms_tag = wp_get_object_terms( $post->ID,  'post_tag' );
+            if ( ! empty( $terms_tag ) ) :
+              if ( ! is_wp_error( $terms_tag ) ) :
+          ?>
       		<ul class="tags">
-				    <li class="tags-item">
-				      <a class="tag" href="#">Grab</a>
-				    </li>
-				    <li class="tags-item">
-				      <a class="tag" href="#">Kickstarter</a>
-				    </li>
-				    <li class="tags-item">
-				      <a class="tag" href="#">Ayala</a>
-				    </li>
-				    <li class="tags-item">
-				      <a class="tag" href="#">AI</a>
-				    </li>
+            <?php foreach($terms_tag as $tag): ?>
+            <li class="tags-item">
+              <a class="tag" href="<?php echo get_term_link($tag->slug, $tag->taxonomy); ?>"><?php echo $tag->name; ?></a>
+            </li>
+            <?php endforeach; ?>
 				  </ul>
+            <?php endif; ?>
+          <?php endif; ?>
       	</div>
       	<div class="l-single__bottom-author">
-      		<span class="l-single__bottom-author-name">Grab Holdings Inc.</span>
-      		<p class="l-single__bottom-author-description">Grab is a Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+      		<span class="l-single__bottom-author-name"><?php echo get_the_author_meta('display_name'); ?></span>
+      		<p class="l-single__bottom-author-description"><?php echo get_the_author_meta('description'); ?></p>
       	</div>
       </div>
+      
       <div class="l-single__related">
       	<h2 class="l-single__related-title">Related Articles</h2>
+        <?php
+          $mainCategorySlug = $category[0]->slug;
+          $article_query = array(
+            'custom_query'   => related_article_query( $mainCategorySlug, get_the_ID() )
+          );
+
+          if($article_query['custom_query']->have_posts()) {
+        ?>
       	<ul class="related-articles">
-      		<?php for($i=0; $i<3; $i++) { ?>
+      		<?php while($article_query['custom_query']->have_posts()): $article_query['custom_query']->the_post(); 
+            $category           = get_the_category( get_the_ID() );
+            $main_category_name = $category[0]->name;
+          ?>
       		<li class="related-articles__item">
-      			<a class="related-articles__item-link" href="">
+      			<a class="related-articles__item-link" href="<?php the_permalink(); ?>">
       				<article class="article-block article-block--related">
                 <div class="article-block__image-wrapper">
-                  <div class="article-block__image" style="background-image: url('https://placeimg.com/350/219/nature');"></div>
+                  <div class="article-block__image" style="background-image: url(<?php echo get_eyecatch_data( get_the_ID(), 'article_size' ); ?>"></div>
                 </div>
                 <div class="article-block__details">
-                  <span class="article-block__category">Business</span>
-                  <h3 class="article-block__title">GrabShare Launches New Enhanced Option for Better Transportation for Riders </h3>
-                  <time class="article-block__date" datetime="07-3-19">July 3, 2019</time>
-                  <p class="article-block__author">Grab Holdings Inc.</p>
+                  <?php if(isset($main_category_name)) : ?>
+                  <span class="article-block__category"><?php echo $main_category_name; ?></span>
+                  <?php endif; ?>
+                  <h3 class="article-block__title"><?php echo get_the_title(); ?></h3>
+                  <time class="article-block__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('M d, Y'); ?></time>
+                  <p class="article-block__author"><?php echo get_the_author_meta('display_name'); ?></p>
                 </div>
               </article>
       			</a>
       		</li>
-      		<?php } ?>
+      		<?php endwhile; wp_reset_query();?>
       	</ul>
+        <?php } ?>
       </div>
     </section>
     <div class="l-single__sidebar">

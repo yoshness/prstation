@@ -25,7 +25,7 @@
   <?php } ?>
   <h2 class="sidebar__title">Top Keywords</h2>
   <?php
-    $terms_tag = sidebar_tag_query();
+    $terms_tag = tag_query();
     if ( $terms_tag && !is_wp_error( $terms_tag ) ) :
   ?>
   <ul class="tags">
