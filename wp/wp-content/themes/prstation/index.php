@@ -57,7 +57,10 @@ get_header();
         <?php } ?>
       </section>
     </div>
-    <a class="advertisement" href="#">Ads</a>
+    <div class="l-index__about">
+      <img src="<?php echo IMAGE_URI; ?>index/about.png" alt="">
+      <img src="<?php echo IMAGE_URI; ?>index/flow.png" alt="">
+    </div>
   </div>
   <div class="l-index__notice l-container">
     <div class="notice">

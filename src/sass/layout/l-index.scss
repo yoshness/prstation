@@ -38,12 +38,22 @@
   }
 }
 
+.l-index__about {
+  display: block;
+
+  width: 295px;
+
+  @include max-screen($breakpoint-mobile) {
+    display: none;
+  }
+}
+
 .l-index__sidebar {
   margin: 34px 0;
 }
 
 .l-index__notice {
-  margin: 15px auto 0;
+  margin: 45px auto 0;
 
   @include max-screen($breakpoint-mobile) {
     margin-top: 35px;
