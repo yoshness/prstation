@@ -1,0 +1,19 @@
+.u-show-pc {
+  display: block;
+
+  @include max-screen($breakpoint-mobile) {
+    display: none;
+  }
+}
+
+.u-show-sp {
+  display: none;
+
+  @include max-screen($breakpoint-mobile) {
+    display: block;
+  }
+}
+
+.u-notap {
+  -webkit-tap-highlight-color: transparent;
+}

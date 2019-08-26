@@ -25,6 +25,12 @@
   padding: 14px 0;
 
   color: $color-skyblue;
+
+  @include max-screen($breakpoint-mobile) {
+    background: rgba(3,52,216,1);
+
+    padding: 9px 0;
+  }
 }
 
 .header__top-inner {
@@ -34,6 +40,12 @@
   justify-content: space-between;
 }
 
+.header__top-left {
+  @include max-screen($breakpoint-mobile) {
+    margin: 0 auto;
+  }
+}
+
 .header__top-logo {
   display: inline-block;
 
@@ -41,8 +53,16 @@
 
   transition: transform 1.5s;
 
+  @include max-screen($breakpoint-mobile) {
+    margin-right: 0;
+  }
+
   img {
     width: 155px;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 85px;
+    }
   }
 }
 
@@ -61,6 +81,9 @@
 
 .header__top-right {
   justify-content: end;
+  @include max-screen($breakpoint-mobile) {
+    display: none;
+  }
 }
 
 .header__top-button {
@@ -82,12 +105,100 @@
   }
 }
 
+.header__hamburger-button {
+  display: flex;
+  position: absolute;
+  top: 0;
+  flex-direction: column;
+
+  outline: 0;
+
+  padding: 5px 0 2px;
+
+  justify-content: space-between;
+
+  span {
+    display: block;
+    position: relative;
+
+    background-color: $color-skyblue;
+
+    width: 17px;
+    height: 2px;
+
+    transform: rotate(0deg);
+    transition: transform .5s ease-in-out,
+                opacity .5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  }
+
+  &.is-active {
+
+    span {
+      position: absolute;
+      top: 12px;
+
+      &:first-child {
+        transform: rotate(45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+    }
+    
+  }
+}
+
 .header__bottom {
   border-bottom: 1px solid $color-bordergray;
 
   padding: 9px 0 5px;
 
   @include max-screen($breakpoint-mobile) {
-    padding: 3px 0;
+    display: none;
+  }
+}
+
+.header__menu {
+  position: fixed;
+  overflow: hidden;
+
+  background: linear-gradient(to bottom, rgba(3,52,216,1) 0%, rgba(0,113,188,1) 100%);
+
+  width: 100%;
+  height: 0;
+
+  z-index: 99;
+  transition: height .3s ease-out;
+
+  &.is-active {
+    height: 96vh;
+  }
+}
+
+.header__menu-inner {
+  height: 96vh;
+}
+
+.header__menu-links {
+  list-style: none;
+
+  position: absolute;
+  bottom: 50px;
+
+  border-top: 1px solid rgba(255, 255, 255, .3);
+
+  width: 92%;
+  padding: 10px 0;
+}
+
+.header__menu-links-item {
+  padding: 5px 0;
+
+  a {
+    font-size: 20px;
+    color: $color-white;
   }
 }

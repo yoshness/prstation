@@ -16,11 +16,13 @@ License URI:        http://opensource.org/licenses/MIT
 @import 'base/sanitize';
 
 @import 'lib/media-queries';
+@import 'lib/utility';
 
 @import 'modules/header';
 @import 'modules/footer';
 @import 'modules/sidebar';
 @import 'modules/nav';
+@import 'modules/menu';
 @import 'modules/articles';
 @import 'modules/article-block';
 @import 'modules/notice';
