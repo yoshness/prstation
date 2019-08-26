@@ -65,19 +65,51 @@
   &.article-block--related {
     display: block;
 
+    @include max-screen($breakpoint-mobile) {
+      display: flex;
+    }
+
     .article-block__image-wrapper, .article-block__image {
       width: 227px;
       height: 135px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 100px;
+        height: 60px;
+      }
     }
     .article-block__details {
       width: 267px;
       margin-top: 10px;
       margin-left: 0;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 0;
+        margin-left: 10px;
+      }
+    }
+    .article-block__category {
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 0;
+      }
     }
     .article-block__title {
       font-size: 20px;
       letter-spacing: 0.01em;
       line-height: 1.3;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+
+        font-size: 14px;
+        letter-spacing: 0.04em;
+        line-height: 1.1;
+      }
+    }
+    .article-block__date, .article-block__author {
+      @include max-screen($breakpoint-mobile) {
+        font-size: 11px;
+      }
     }
   }
 }

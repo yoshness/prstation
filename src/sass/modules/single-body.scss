@@ -8,6 +8,12 @@
     color: $color-secondary;
     font-weight: normal;
 
+    @include max-screen($breakpoint-mobile) {
+      margin: 10px 0 5px 12px;
+
+      font-size: 18px;
+    }
+
     &:before {
       content: '';
 
@@ -20,6 +26,14 @@
 
       width: 6px;
       height: 36px;
+
+      @include max-screen($breakpoint-mobile) {
+        top: 3px;
+        left: -11px;
+
+        width: 3px;
+        height: 18px;
+      }
     }
   }
 
@@ -31,6 +45,12 @@
     color: $color-secondary;
 
     text-transform: uppercase;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 9px;
+
+      font-size: 13px;
+    }
   }
 
   h4 {
@@ -39,6 +59,12 @@
     font-size: 24px;
     color: $color-secondary;
     letter-spacing: 0.007em;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 9px;
+
+      font-size: 15px;
+    }
   }
 
   p {
@@ -50,11 +76,22 @@
     color: $color-black;
     letter-spacing: -0.007em;
     line-height: 1.4;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 5px;
+
+      font-size: 12px;
+      line-height: 1.45;
+    }
   }
 
   p {
     + h3, + h4 {
       margin-top: 20px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 14px;
+      }
     }
   }
 
@@ -66,6 +103,14 @@
     color: $color-black;
     letter-spacing: 0.015em;
     line-height: 1.2;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      margin: 30px 0;
+      padding: 0 20px;
+
+      font-size: 15px;
+    }
   }
 
   ul {
@@ -73,10 +118,18 @@
 
     margin: 25px 0 16px 60px;
 
+    @include max-screen($breakpoint-mobile) {
+      margin: 19px 0 10px 20px;
+    }
+
     li {
       font-size: 21px;
       color: $color-secondary;
       line-height: .45;
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 14px;
+      }
 
       &:before {
         content: "·";
@@ -84,6 +137,14 @@
         vertical-align: middle;
 
         font-size: 65px;
+
+        @include max-screen($breakpoint-mobile) {
+          position: relative;
+          top: 2px;
+          left: -2px;
+
+          font-size: 45px;
+        }
       }
     }
   }
@@ -91,11 +152,22 @@
   ol {
     margin: 25px 0 0 60px;
 
+    @include max-screen($breakpoint-mobile) {
+      margin: 11px 0 16px 10px;
+    }
+
     li {
       margin-left: 26px;
 
       font-size: 21px;
       color: $color-secondary;
+
+      @include max-screen($breakpoint-mobile) {
+        left: -2px;
+
+        font-size: 14px;
+        line-height: 1.45;
+      }
     }
   }
 
@@ -106,6 +178,11 @@
     max-width: 100% !important;
     height: 430px;
     margin: 66px auto 57px;
+
+    @include max-screen($breakpoint-mobile) {
+      height: 195px;
+      margin: 19px auto 41px;
+    }
   }
 
   table {
@@ -124,6 +201,12 @@
 
       font-size: 16px;
       color: $color-secondary;
+
+      @include max-screen($breakpoint-mobile) {
+        padding: 3px 25px;
+
+        font-size: 12px;
+      }
     }
   }
 }

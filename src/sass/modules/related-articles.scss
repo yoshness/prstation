@@ -7,10 +7,19 @@
 
   flex-wrap: wrap;
   justify-content: space-between;
+  @include max-screen($breakpoint-mobile) {
+    display: block;
+
+    width: 100%;
+  }
 }
 
 .related-articles__item {
   width: 33.3%;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;
+  }
 }
 
 .related-articles__item-link {
