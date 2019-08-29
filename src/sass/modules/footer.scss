@@ -106,7 +106,7 @@
 }
 
 .footer__sns-item {
-  margin: 0 10px;
+  margin: 0 5px;
 
   @include max-screen($breakpoint-mobile) {
     font-size: 12px;
@@ -118,8 +118,35 @@
 }
 
 .footer__sns-link {
+  display: inline-block;
+  text-align: center;
+
+  padding: 8px 18px;
+
   font-family: $font-lato-bold;
   color: $color-white;
+
+  transition: opacity $duration $easing;
+
+  &:hover {
+    opacity: .8;
+  }
+
+  .icon {
+    margin-right: 4px;
+  }
+
+  // MODIFIER
+  &.footer__sns-link--facebook {
+    background-color: $color-facebook;
+  }
+  &.footer__sns-link--twitter {
+    background-color: $color-twitter;
+
+    .icon-twitter {
+      vertical-align: -1px;
+    }
+  }
 }
 
 .footer__links {

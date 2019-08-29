@@ -67,7 +67,7 @@ get_header();
       <p class="notice__text">
         Want to be heard? Post your Press Release here.
       </p>
-      <a class="notice__button" href="#">Post your PR</a>
+      <a class="notice__button" href="https://docs.google.com/forms/d/e/1FAIpQLSdqkNsU4gqsEEnWavbE7TCW9wg1pUsrG9IerOn--UM3GbpqfA/viewform?fbclid=IwAR1M5-fQIODvNpfmd4Z77pXv3MBH85Dx1Vtp985jWx35Dq6NYM2G0VjEqf4" target="_blank">Post your PR</a>
     </div>
   </div>
   <div class="l-index__inner l-container">

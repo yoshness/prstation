@@ -17,7 +17,7 @@
         <p class="header__top-description">Press Release, News Release Distribution Service in the Philippines</p>
       </div>
       <div class="header__top-right">
-        <a class="header__top-button" href="#">Post your PR</a>
+        <a class="header__top-button" href="https://docs.google.com/forms/d/e/1FAIpQLSdqkNsU4gqsEEnWavbE7TCW9wg1pUsrG9IerOn--UM3GbpqfA/viewform?fbclid=IwAR1M5-fQIODvNpfmd4Z77pXv3MBH85Dx1Vtp985jWx35Dq6NYM2G0VjEqf4" target="_blank">Post your PR</a>
       </div>
     </div>
   </div>

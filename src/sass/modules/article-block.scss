@@ -8,6 +8,9 @@
     .article-block__image {
       transform: scale(1.2);
     }
+    .article-block__title {
+      color: $color-linkblue;
+    }
   }
 
   // MODIFIER
@@ -186,6 +189,7 @@
   letter-spacing: 0.035em;
   line-height: 1.1;
 
+  transition: color $duration $easing;
   word-break: break-word;
 
   @include max-screen($breakpoint-mobile) {
