@@ -69,7 +69,7 @@
           <a href="#">Post your PR</a>
         </li>
         <li class="header__menu-links-item">
-          <a href="#">Contact us</a>
+          <a href="<?php echo HOME_URL; ?>contact">Contact us</a>
         </li>
       </ul>
     </div>

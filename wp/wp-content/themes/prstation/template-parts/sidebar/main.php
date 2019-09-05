@@ -40,6 +40,6 @@
     <p class="sidebar__contact-description">
       For more information about PR Station you may send your inquiry in our contact us page.
     </p>
-    <a class="sidebar__contact-button" href="#">Contact us</a>
+    <a class="sidebar__contact-button" href="<?php echo HOME_URL; ?>contact">Contact us</a>
   </div>
 </aside>

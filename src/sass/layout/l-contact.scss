@@ -1,0 +1,13 @@
+.l-contact {
+  text-align: center;
+
+  padding: 38px 0 20px;
+
+  @include max-screen($breakpoint-mobile) {
+    padding: 28px 0 30px;
+  }
+}
+
+.l-contact__inner {
+
+}

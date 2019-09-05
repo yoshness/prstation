@@ -1,0 +1,139 @@
+.contact {
+  
+}
+.contact__title {
+  font-size: 34px;
+  color: $color-black;
+  letter-spacing: 0.05em;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 20px;
+  }
+}
+.contact__description {
+  margin-top: 10px;
+
+  font-size: 21px;
+  color: $color-black;
+
+  @include max-screen($breakpoint-mobile) {
+    padding: 0 20px;
+
+    font-size: 14px;
+  }
+}
+.contact__form {
+  text-align: left;
+
+  padding: 64px 210px;
+
+  @include max-screen($breakpoint-mobile) {
+    padding: 14px 0;
+  }
+}
+.contact__form-block {
+  display: flex;
+
+  margin-bottom: 38px;
+
+  color: $color-black;
+
+  flex-wrap: wrap;
+  align-items: baseline;
+
+  label {
+    font-size: 21px;
+
+    flex-basis: 20%;
+    @include max-screen($breakpoint-mobile) {
+      width: 100px;
+
+      font-size: 14px;
+      line-height: 1.2;
+    }
+
+    &.wpforms-error {
+      margin-left: 155px;
+      padding-top: 5px;
+
+      font-size: 16px;
+      color: $color-error;
+
+      flex-basis: 100%;
+      @include max-screen($breakpoint-mobile) {
+        margin-left: 70px;
+
+        font-size: 12px;
+      }
+    }
+  }
+
+  input, textarea {
+    border: 1px solid $color-primary;
+
+    width: 100%;
+    padding: 10px 15px;
+
+    font-size: 21px;
+
+    flex-basis: 80%;
+    @include max-screen($breakpoint-mobile) {
+      padding: 5px 10px;
+
+      font-size: 14px;
+    }
+  }
+}
+.contact__form-submit {
+  display: block;
+
+  border: 1px solid $color-white;
+  background-color: $color-linkblue;
+
+  width: 130px;
+  margin: 0 auto;
+  margin-top: 17px;
+  padding: 9px 20px;
+
+  color: $color-white;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: background-color $duration $easing,
+              color $duration $easing,
+              border-color $duration $easing;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 110px;
+    margin-top: -15px;
+    padding: 7px 20px 4px;
+
+    font-size: 11px;
+  }
+
+  &:hover {
+    border-color: $color-linkblue;
+    background-color: $color-white;
+
+    color: $color-linkblue;
+  }
+}
+
+// Confirmation Page
+.wpforms-confirmation-container {
+  margin: 20px 0 60px;
+
+  font-size: 21px;
+  color: $color-black;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 0;
+    padding: 0 20px;
+
+    font-size: 14px;
+  }
+}
+
+.wpforms-field-hp {
+    display: none;
+}
