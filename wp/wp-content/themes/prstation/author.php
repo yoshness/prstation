@@ -1,20 +1,25 @@
 <?php
 /**
+ * The template for displaying all pages
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
  *
- * Template Name: Archive Page
+ * @link https://codex.wordpress.org/Template_Hierarchy
  */
 
 get_header(); ?>
 <?php get_template_part( 'template-parts/header/main'); ?>
 
 <main class="l-archive">
-  <!-- <div class="l-archive__breadcrumbs l-container">
-    <?php get_template_part( 'template-parts/breadcrumbs'); ?>
-  </div> -->
   <div class="l-archive__inner l-container">
     <div class="l-archive__articles">
       <section class="articles">
-        <h2 class="articles__title">Archive</h2>
+        <?php
+          $curauth = get_queried_object();
+        ?>
+        <h2 class="articles__title">Archive <?php echo $curauth->display_name; ?></h2>
         <?php
           $article_query = array(
             'custom_query'   => archive_article_query()
@@ -48,9 +53,6 @@ get_header(); ?>
           <?php endwhile; wp_reset_query();?>
         </ul>
         <?php } ?>
-        <div class="articles__more">
-          <a class="articles__more-button" href="#">View More</a>
-        </div>
       </section>
     </div>
     <div class="l-archive__sidebar">

@@ -29,7 +29,7 @@ get_header(); ?>
       	<time class="l-single__top-date" datetime="<?php the_time('Y-m-d');?>"><?php the_time('M d, Y'); ?></time>
         <?php if ( have_posts() ) : ?>
           <?php while ( have_posts() ) : the_post(); ?>
-          <p class="l-single__top-author"><?php echo get_the_author_meta('display_name'); ?></p>
+          <a href="<?php echo get_author_posts_url( get_the_author_meta('ID'), get_the_author_meta('display_name')); ?>" class="l-single__top-author"><?php echo get_the_author_meta('display_name'); ?></a>
           <?php endwhile; ?>
         <?php endif; ?>
 				<div class="l-single__top-eyecatch" style="background-image: url(<?php echo get_eyecatch_data( get_the_ID(), 'article_size' ); ?>)"></div>
