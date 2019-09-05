@@ -62,8 +62,10 @@
   color: $color-darkgray;
   line-height: 1.1;
 
+  width: 92.6%;
+  
   @include max-screen($breakpoint-mobile) {
-    font-size: 18px;
+    font-size: 18px;width: 100%;
   }
 }
 

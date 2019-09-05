@@ -32,7 +32,7 @@
   <?php endif; ?>
 
   <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico">
-  <meta name="google-site-verification" content="NaeCw3sqN-uixuIqV3s9iK8OUFNVgqF6R7BEdKXRROc" />
+  <meta name="google-site-verification" content="f4Jee3FCHBzim2xo-2PyPm5Qh1gnL8I8tPm91pv2Jyk" />
 	<link rel="profile" href="https://gmpg.org/xfn/11" />
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/style.css">
 

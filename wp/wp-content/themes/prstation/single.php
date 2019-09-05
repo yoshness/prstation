@@ -32,7 +32,7 @@ get_header(); ?>
           <a href="<?php echo get_author_posts_url( get_the_author_meta('ID'), get_the_author_meta('display_name')); ?>" class="l-single__top-author"><?php echo get_the_author_meta('display_name'); ?></a>
           <?php endwhile; ?>
         <?php endif; ?>
-				<div class="l-single__top-eyecatch" style="background-image: url(<?php echo get_eyecatch_data( get_the_ID(), 'article_size' ); ?>)"></div>
+				<div class="l-single__top-eyecatch" style="background-image: url(<?php echo get_eyecatch_data( get_the_ID(), 'eyecatch_size' ); ?>)"></div>
       </div>
       <div class="single-body">
         <?php if ( have_posts() ) : ?>
