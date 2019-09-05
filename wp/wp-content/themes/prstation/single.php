@@ -103,7 +103,6 @@ get_header(); ?>
       </div>
     </section>
     <div class="l-single__sidebar">
-      <a class="advertisement" href="#">Ads</a>
       <?php get_template_part( 'template-parts/sidebar/main'); ?>
     </div>
   </div>

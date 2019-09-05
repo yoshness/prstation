@@ -54,7 +54,6 @@ get_header(); ?>
       </section>
     </div>
     <div class="l-archive__sidebar">
-      <a class="advertisement" href="#">Ads</a>
       <?php get_template_part( 'template-parts/sidebar/main'); ?>
     </div>
   </div>

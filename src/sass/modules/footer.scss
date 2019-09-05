@@ -152,11 +152,11 @@
 
   display: flex;
 
-  margin: 30px auto 20px;
+  margin-top: 40px;
 
   justify-content: space-between;
   @include max-screen($breakpoint-mobile) {
-    margin: 10px auto;
+    margin-top: 10px;
 
     order: 3;
     flex-basis: 100%;
@@ -165,19 +165,18 @@
 }
 
 .footer__links-item {
-  margin: 0 30px;
-
-  @include max-screen($breakpoint-mobile) {
-    margin: 0 12px;
-  }
 
   &:first-child {
-    margin-left: 0;
+    margin-right: 35px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-right: 15px;
+    }
   }
 
   a {
     font-size: 17px;
-    color: $color-skyblue;
+    color: $color-white;
 
     transition: color $duration $easing;
 
@@ -186,7 +185,7 @@
     }
 
     &:hover {
-      color: $color-white;
+      color: $color-skyblue;
     }
   }
 }
@@ -195,7 +194,7 @@
   margin: 0 auto;
 
   font-size: 17px;
-  color: $color-secondary;
+  color: $color-lightgray;
 
   @include max-screen($breakpoint-mobile) {
     font-size: 11px;
