@@ -22,7 +22,7 @@ get_header(); ?>
         <h2 class="articles__title">Archive <?php echo $curauth->display_name; ?></h2>
         <?php
           $article_query = array(
-            'custom_query'   => archive_article_query()
+            'custom_query'   => $wp_query
           );
 
           if ( $article_query['custom_query']->have_posts() ) {
