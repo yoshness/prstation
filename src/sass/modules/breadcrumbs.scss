@@ -1,5 +1,9 @@
 .breadcrumbs {
   margin-top: 5px;
+
+  @include max-screen($breakpoint-mobile) {
+    display: none;
+  }
 }
 
 .breadcrumbs__list {

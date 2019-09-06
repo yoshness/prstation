@@ -46,6 +46,10 @@
   @include max-screen($breakpoint-mobile) {
     display: none;
   }
+
+  img {
+     width: 295px;
+  }
 }
 
 .l-index__sidebar {
