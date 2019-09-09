@@ -50,3 +50,6 @@
 </head>
 
 <body <?php body_class(); ?>>
+  <div class="loader js-loader">
+    <?php echo file_get_contents(IMAGE_URI.'loader.svg'); ?>
+  </div>
