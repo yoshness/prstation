@@ -1,0 +1,21 @@
+.l-404 {
+  padding: 130px 0 90px;
+
+  @include max-screen($breakpoint-mobile) {
+    padding-bottom: 0;
+  }
+}
+
+.l-404__inner {
+
+}
+
+.l-404__articles {
+  padding: 65px 185px 0;
+
+  @include max-screen($breakpoint-mobile) {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 35px;
+  }
+}

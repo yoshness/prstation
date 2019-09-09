@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102.83 131.99">
+  <title>Asset 27</title>
+  <g>
+    <g>
+      <g>
+        <ellipse cx="31.16" cy="117.83" rx="26.75" ry="14.16" fill="#f2f2f2"/>
+        <path d="M62.32,127.59A31.32,31.32,0,0,0,31.16,96.11,31.32,31.32,0,0,0,0,127.59" fill="#dde3e9" fill-rule="evenodd"/>
+      </g>
+      <rect x="29.59" width="3.15" height="100.72" fill="#dde3e9"/>
+    </g>
+    <g opacity="0.7">
+      <g>
+        <ellipse cx="79.42" cy="89.17" rx="20.1" ry="11.49" fill="#f2f2f2"/>
+        <path d="M102.83,97.08c0-14.1-10.48-25.53-23.41-25.53S56,83,56,97.08" fill="#dde3e9" fill-rule="evenodd"/>
+      </g>
+      <rect x="78.16" y="0.07" width="3.16" height="86.03" fill="#dde3e9"/>
+    </g>
+  </g>
+</svg>

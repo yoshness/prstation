@@ -1,0 +1,94 @@
+.section-404 {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-404__decor1 {
+  width: 105px;
+  position: absolute;
+  top: -130px;
+  left: 207px;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 50px;
+    left: 30px;
+  }
+}
+
+.section-404__decor2 {
+  width: 600px;
+  position: absolute;
+  z-index: 1;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include max-screen($breakpoint-mobile) {
+    width: 85%;
+    top: -65px;
+  }
+}
+
+.section-404__title {
+  margin: 0 auto;
+  width: 680px;
+  position: relative;
+  z-index: 2;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 90%;
+    top: -30px;
+  }
+}
+
+.section-404__description {
+  font-size: 24px;
+  color: $color-secondary;
+  margin-top: 5px;
+  position: relative;
+  z-index: 3;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 14px;
+    margin-top: -35px;
+  }
+}
+
+.section-404__image {
+  width: 530px;
+  margin-top: 35px;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;
+  }
+}
+
+.section-404__articles {
+  list-style: none;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  @include max-screen($breakpoint-mobile) {
+    display: block;
+
+    width: 100%;
+  }
+}
+
+.section-404__articles-item {
+  width: 33.3%;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;
+  }
+}
+
+.section-404__articles-item-link {
+  display: block;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 21px;
+  }
+}

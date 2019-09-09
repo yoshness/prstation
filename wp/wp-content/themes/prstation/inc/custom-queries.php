@@ -74,3 +74,14 @@
 
     return get_terms('post_tag', $args);
   }
+
+  function recent_article_query() {
+    $args = array(
+      'post_type'      => 'post',
+      'posts_per_page' => 3,
+      'order'          => 'DESC',
+      'post_status'    => 'publish',
+    );
+
+    return new WP_Query( $args );
+  }
