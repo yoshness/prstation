@@ -71,7 +71,7 @@
       </nav>
       <ul class="header__menu-links">
         <li class="header__menu-links-item">
-          <a href="#">Post your PR</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqkNsU4gqsEEnWavbE7TCW9wg1pUsrG9IerOn--UM3GbpqfA/viewform?fbclid=IwAR1M5-fQIODvNpfmd4Z77pXv3MBH85Dx1Vtp985jWx35Dq6NYM2G0VjEqf4" target="_blank">Post your PR</a>
         </li>
         <li class="header__menu-links-item">
           <a href="<?php echo HOME_URL; ?>contact">Contact us</a>

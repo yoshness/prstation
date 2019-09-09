@@ -4,14 +4,14 @@
     margin: 28px 0 15px 17px;
 
     font-family: $font-avenir-roman;
-    font-size: 36px;
+    font-size: 22px;
     color: $color-secondary;
     font-weight: normal;
 
     @include max-screen($breakpoint-mobile) {
       margin: 10px 0 5px 12px;
 
-      font-size: 20px;
+      font-size: 16px;
     }
 
     &:before {
@@ -68,7 +68,7 @@
   }
 
   p {
-    text-align: justify;
+    text-align: left;
 
     margin-bottom: 15px;
 
@@ -123,7 +123,7 @@
     }
 
     li {
-      font-size: 21px;
+      font-size: 19px;
       color: $color-secondary;
       line-height: .45;
 
@@ -133,6 +133,9 @@
 
       &:before {
         content: "·";
+        position: relative;
+        top: 2px;
+        left: -5px;
 
         vertical-align: middle;
 
@@ -159,7 +162,7 @@
     li {
       margin-left: 26px;
 
-      font-size: 21px;
+      font-size: 19px;
       color: $color-secondary;
 
       @include max-screen($breakpoint-mobile) {
@@ -207,6 +210,17 @@
 
         font-size: 14px;
       }
+    }
+  }
+
+  img {
+    display: block;
+
+    margin: 0 auto;
+
+    @include max-screen($breakpoint-mobile) {
+      max-width: 100%;
+      height: auto;
     }
   }
 }
