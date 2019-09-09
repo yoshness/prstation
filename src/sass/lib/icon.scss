@@ -1,12 +1,13 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('#{$path-font}/icon/icomoon.eot?p5jtk7');
-  src:  url('#{$path-font}/icon/icomoon.eot?p5jtk7#iefix') format('embedded-opentype'),
-    url('#{$path-font}/icon/icomoon.ttf?p5jtk7') format('truetype'),
-    url('#{$path-font}/icon/icomoon.woff?p5jtk7') format('woff'),
-    url('#{$path-font}/icon/icomoon.svg?p5jtk7#icomoon') format('svg');
+  src:  url('#{$path-font}/icon/icomoon.eot?ggjeba');
+  src:  url('#{$path-font}/icon/icomoon.eot?ggjeba#iefix') format('embedded-opentype'),
+    url('#{$path-font}/icon/icomoon.ttf?ggjeba') format('truetype'),
+    url('#{$path-font}/icon/icomoon.woff?ggjeba') format('woff'),
+    url('#{$path-font}/icon/icomoon.svg?ggjeba#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
+  font-display: block;
 }
 
 [class^="icon-"], [class*=" icon-"] {
@@ -32,4 +33,7 @@
 }
 .icon-facebook:before {
   content: "\e911";
+}
+.icon-search:before {
+  content: "\e986";
 }

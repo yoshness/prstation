@@ -9,47 +9,56 @@
  * @since 1.0.0
  */
 
-get_header();
-?>
+get_header(); ?>
+<?php get_template_part( 'template-parts/header/main'); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+<main class="l-archive">
+  <div class="l-archive__inner l-container">
+    <div class="l-archive__articles">
+      <section class="articles">
+        <h2 class="articles__title">Search: <?php echo get_search_query(); ?></h2>
+        <?php
+          $article_query = array(
+            'custom_query'   => $wp_query
+          );
 
-		<?php if ( have_posts() ) : ?>
+          if ( $article_query['custom_query']->have_posts() ) {
+        ?>
+        <ul class="articles__list">
+          <?php
+            while($article_query['custom_query']->have_posts()): $article_query['custom_query']->the_post();
+            $category           = get_the_category( get_the_ID() );
+            $main_category_name = $category[0]->name;
+          ?>
+          <li class="articles__list-item">
+            <a class="articles__list-item-link" href="<?php echo the_permalink(); ?>">
+              <article class="article-block">
+                <div class="article-block__image-wrapper">
+                  <div class="article-block__image" style="background-image: url('<?php echo get_eyecatch_data( get_the_ID(), 'article_size'); ?>"></div>
+                </div>
+                <div class="article-block__details">
+                  <?php if(isset($main_category_name)) : ?>
+                  <span class="article-block__category"><?php echo $main_category_name; ?></span>
+                  <?php endif; ?>
+                  <h3 class="article-block__title"><?php echo get_the_title(); ?></h3>
+                  <time class="article-block__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('M d, Y'); ?></time>
+                  <p class="article-block__author"><?php echo get_the_author_meta('display_name'); ?></p>
+                </div>
+              </article>
+            </a>
+          </li>
+          <?php endwhile; wp_reset_query();?>
+        </ul>
+        <?php } ?>
+      </section>
+    </div>
+    <div class="l-archive__sidebar">
+      <?php get_template_part( 'template-parts/sidebar/main'); ?>
+    </div>
+  </div>
+</main>
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php _e( 'Search results for:', 'twentynineteen' ); ?>
-				</h1>
-				<div class="page-description"><?php echo get_search_query(); ?></div>
-			</header><!-- .page-header -->
-
-			<?php
-			// Start the Loop.
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content/content', 'excerpt' );
-
-				// End the loop.
-			endwhile;
-
-			// Previous/next page navigation.
-			twentynineteen_the_posts_navigation();
-
-			// If no content, include the "No posts found" template.
-		else :
-			get_template_part( 'template-parts/content/content', 'none' );
-
-		endif;
-		?>
-		</main><!-- #main -->
-	</section><!-- #primary -->
+<?php get_template_part( 'template-parts/footer/main'); ?>
 
 <?php
 get_footer();

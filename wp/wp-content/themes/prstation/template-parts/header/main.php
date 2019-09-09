@@ -17,6 +17,11 @@
         <p class="header__top-description">Press Release, News Release Distribution Service in the Philippines</p>
       </div>
       <div class="header__top-right">
+        <form role="search" method="get" class="header__top-search" action="<?php echo HOME_URL; ?>">
+          <i class="icon icon-search header__top-search-button js-header-search-trigger"></i>
+          <input type="hidden" name="post_type" value="archive" />
+          <input type="search" class="header__top-search-input js-header-search-input" placeholder="<?php echo esc_attr_x( 'Search', 'placeholder' ) ?>" name="s" />
+        </form>
         <a class="header__top-button" href="https://docs.google.com/forms/d/e/1FAIpQLSdqkNsU4gqsEEnWavbE7TCW9wg1pUsrG9IerOn--UM3GbpqfA/viewform?fbclid=IwAR1M5-fQIODvNpfmd4Z77pXv3MBH85Dx1Vtp985jWx35Dq6NYM2G0VjEqf4" target="_blank">Post your PR</a>
       </div>
     </div>
