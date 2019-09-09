@@ -12,6 +12,12 @@ export default function loader() {
       $loader.addClass(CONST.HIDDEN_CLASS);
     }, 9000);
 
+    try {
+      sessionStorage.setItem('visited', true);
+    } catch (e) {
+      console.error(e);
+    }
+
     // Need strokes on svg
     // $svg.find('path').each((index, val) => {
     //   let path = val;
@@ -25,12 +31,6 @@ export default function loader() {
     //   ).delay(4400).queue(() => {
     //     $loader.addClass(CONST.HIDDEN_CLASS);
     //   });
-
-    //   try {
-    //     sessionStorage.setItem('visited', true);
-    //   } catch (e) {
-    //     console.error(e);
-    //   }
     // });
 
   }
