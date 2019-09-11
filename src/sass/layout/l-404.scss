@@ -1,7 +1,9 @@
 .l-404 {
+  margin-top: 100px;
   padding: 130px 0 90px;
 
   @include max-screen($breakpoint-mobile) {
+    margin-top: 35px;
     padding-bottom: 0;
   }
 }

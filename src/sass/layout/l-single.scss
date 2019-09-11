@@ -1,7 +1,9 @@
 .l-single {
+  margin-top: 120px;
   margin-bottom: 165px;
 
   @include max-screen($breakpoint-mobile) {
+    margin-top: 55px;
     margin-bottom: 25px;
   }
 }
@@ -55,6 +57,7 @@
 }
 
 .l-single__top-title {
+  width: 92.6%;
   margin-top: 8px;
 
   font-family: $font-avenir-black;
@@ -62,10 +65,9 @@
   color: $color-darkgray;
   line-height: 1.1;
 
-  width: 92.6%;
-  
-  @include max-screen($breakpoint-mobile) {
-    font-size: 18px;width: 100%;
+  @include max-screen($breakpoint-mobile) {width: 100%;
+
+    font-size: 18px;
   }
 }
 
@@ -148,6 +150,7 @@
 
 .l-single__bottom-author {
   display: none;
+
   border-top: 1px solid $color-bordergray;
   border-bottom: 1px solid $color-bordergray;
 

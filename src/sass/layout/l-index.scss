@@ -1,5 +1,9 @@
 .l-index {
+  margin-top: 140px;
 
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 65px;
+  }
 }
 
 .l-index__inner {
