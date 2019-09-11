@@ -55,6 +55,11 @@
   <div class="header__menu js-menu">
     <div class="header__menu-inner l-container">
       <nav class="menu">
+        <form role="search" method="get" class="menu__search" action="<?php echo HOME_URL; ?>">
+          <i class="menu__search-icon icon icon-search"></i>
+          <input type="hidden" name="post_type" value="archive" />
+          <input type="search" class="menu__search-input" placeholder="<?php echo esc_attr_x( 'Search', 'placeholder' ) ?>" name="s" />
+        </form>
         <ul class="menu__list">
           <li class="menu__list-item">
             <a class="menu__list-item-link" href="<?php echo HOME_URL; ?>">TOP</a>
