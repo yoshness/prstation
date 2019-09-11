@@ -26,7 +26,8 @@ get_header(); ?>
           <?php
             while($article_query['custom_query']->have_posts()): $article_query['custom_query']->the_post();
             $category           = get_the_category( get_the_ID() );
-            $main_category_name = $category[0]->name;
+            $main_category_name = !empty($category[0]->name) ? $category[0]->name : 'preview';
+            $archiveType = 'category';
           ?>
           <li class="articles__list-item">
             <a class="articles__list-item-link" href="<?php echo the_permalink(); ?>">

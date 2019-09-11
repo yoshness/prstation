@@ -13,13 +13,20 @@ get_header(); ?>
 <?php get_template_part( 'template-parts/header/main'); ?>
 
 <main class="l-archive">
+  <?php
+    $term = get_queried_object();
+    $category         = get_the_terms( $post->ID, 'category' );
+    $headingTitle     = single_cat_title("", false);
+    $main_category_name = $term->user_nicename;
+    $archiveType      = 'author';
+  ?>
+  <div class="l-archive__breadcrumbs l-container">
+    <?php include( locate_template( 'template-parts/breadcrumbs.php', false, false ) ); ?>
+  </div>
   <div class="l-archive__inner l-container">
     <div class="l-archive__articles">
       <section class="articles">
-        <?php
-          $curauth = get_queried_object();
-        ?>
-        <h2 class="articles__title">Archive <?php echo $curauth->display_name; ?></h2>
+        <h2 class="articles__title">Archive <?php echo $term->display_name; ?></h2>
         <?php
           $article_query = array(
             'custom_query'   => $wp_query

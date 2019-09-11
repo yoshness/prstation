@@ -12,6 +12,7 @@ get_header(); ?>
     $term = get_queried_object();
     $category         = get_the_terms( $post->ID, 'category' );
     $headingTitle     = single_cat_title("", false);
+    $main_category_name = !empty($category[0]->name) ? $category[0]->name : 'preview';
     $archiveType      = 'tag';
   ?>
   <div class="l-archive__breadcrumbs l-container">

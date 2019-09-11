@@ -15,8 +15,10 @@ get_header(); ?>
 <main class="l-single">
   <div class="l-single__breadcrumbs l-container">
     <?php
-      $category         = get_the_category( $post->ID );
-      $mainCategoryName = !empty($category[0]->name) ? $category[0]->name : 'preview';
+      $category           = get_the_category( $post->ID );
+      $main_category_name = !empty($category[0]->name) ? $category[0]->name : 'preview';
+      $archiveType        = 'category';
+      $singlePage = true;
     ?>
     <?php include( locate_template( 'template-parts/breadcrumbs.php', false, false ) ); ?>
   </div>
