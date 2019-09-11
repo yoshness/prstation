@@ -51,5 +51,5 @@
 
 <body <?php body_class(); ?>>
   <div class="loader js-loader">
-    <?php echo file_get_contents(IMAGE_URI.'loader.svg'); ?>
+    <img src="<?php echo IMAGE_URI; ?>loader.svg" alt="Loader Image">
   </div>

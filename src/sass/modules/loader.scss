@@ -14,7 +14,7 @@
   z-index: 12;
   transition: opacity 2s $easing;
 
-  svg {
+  img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -28,13 +28,10 @@
 
     transform-style: preserve-3d;
     animation-iteration-count: 6;
+    
     @include max-screen($breakpoint-mobile) {
       width: 225px;
       height: 150px;
-    }
-
-    .path {
-      display: none;
     }
   }
 
