@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer js-footer">
   <div class="footer__inner l-container">
     <div class="footer__logo">
       <img src="<?php echo IMAGE_URI; ?>logo-alt.svg" alt="PR Station">

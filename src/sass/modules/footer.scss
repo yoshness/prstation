@@ -6,6 +6,10 @@
   @include max-screen($breakpoint-mobile) {
     padding-bottom: 5px;
   }
+
+  &.is-slide {
+    width: 1410px;
+  }
 }
 
 .footer__inner {

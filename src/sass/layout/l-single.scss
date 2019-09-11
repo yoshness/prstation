@@ -11,8 +11,14 @@
 .l-single__inner {
   display: flex;
 
+  transition: transform $duration $easing;
+
   @include max-screen($breakpoint-mobile) {
     display: block;
+  }
+
+  &.is-slide {
+    transform: translateX(105px);
   }
 }
 
@@ -47,6 +53,10 @@
   @include max-screen($breakpoint-mobile) {
     margin-bottom: 21px;
   }
+}
+
+.l-single__top-sns {
+
 }
 
 .l-single__top-category {

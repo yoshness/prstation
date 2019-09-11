@@ -1,0 +1,65 @@
+.sns {
+  position: relative;
+}
+
+.sns__list {
+  list-style-type: none;
+
+  position: absolute;
+  top: 21px;
+  left: -110px;
+
+  @include max-screen($breakpoint-mobile) {
+    top: 52px;
+    right: 0;
+    left: auto;
+  }
+}
+
+.sns__list-item {
+  text-align: center;
+
+  border-radius: 100%;
+  background-color: $color-linkblue;
+
+  width: 36px;
+  height: 36px;
+
+  @include max-screen($breakpoint-mobile) {
+    display: inline-block;
+
+    width: 18px;
+    height: 18px;
+  }
+
+  &:first-child {
+    margin-bottom: 7px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-right: 3px;
+      margin-bottom: 0;
+    }
+  }
+
+  i {
+    color: $color-white;
+  }
+
+  .icon-facebook-round {
+    font-size: 25px;
+    line-height: 1.5;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 12px;
+    }
+  }
+  .icon-twitter {
+    font-size: 18px;
+    line-height: 2.2;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 10px;
+      line-height: 1.5;
+    }
+  }
+}

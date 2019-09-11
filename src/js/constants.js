@@ -5,6 +5,7 @@ module.exports = {
   ACTIVE_CLASS: 'is-active',
   HIDDEN_CLASS: 'is-hidden',
   FADEOUT_CLASS: 'is-fadeout',
+  SLIDE_CLASS: 'is-slide',
   $window: $(window),
   $document: $(document),
   $htmlBody: $('html, body'),
