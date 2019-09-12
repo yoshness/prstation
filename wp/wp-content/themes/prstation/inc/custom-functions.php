@@ -35,3 +35,11 @@ add_filter('acf/options_page/settings', 'my_acf_options_page_settings');
 
 // Remove Guttenberg (revert to old style WP Admin editor)
 add_filter('use_block_editor_for_post', '__return_false', 10);
+
+add_action('wp_enqueue_scripts', 'loader_enqueue');
+
+function loader_enqueue() {
+  if ( is_front_page() ) {
+    wp_enqueue_script('loaderjs', ITEM_URL.'assets/index.js');
+  }
+}

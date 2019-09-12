@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 12);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10690,107 +10690,27 @@ return jQuery;
 
 
 /***/ }),
-/* 2 */
+/* 2 */,
+/* 3 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__constants__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__constants___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__constants__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_sticky_header__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_trigger_menu__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modules_search__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modules_sns_slide__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modules_browser_hack__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_loader__ = __webpack_require__(6);
 
 
 
 
-
-
-
-
-__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__modules_sticky_header__["a" /* default */])();
-__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__modules_trigger_menu__["a" /* default */])();
-__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__modules_search__["a" /* default */])();
-__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__modules_browser_hack__["a" /* default */])();
-
-if (__WEBPACK_IMPORTED_MODULE_0__constants___default.a.$body.hasClass('single-post')) {
-  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__modules_sns_slide__["a" /* default */])();
-}
+__WEBPACK_IMPORTED_MODULE_0__constants___default.a.$document.ready(function () {
+  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__modules_loader__["a" /* default */])();
+});
 
 /***/ }),
-/* 3 */,
-/* 4 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 5 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = browserHack;
-
-
-function browserHack() {
-
-    'use strict';
-
-    //htmlタグを変数に
-
-    var htmlTag = document.documentElement;
-
-    //userAgentを変数に
-    var userAgent = window.navigator.userAgent.toLowerCase(),
-        platform = window.navigator.platform.toLowerCase(),
-        deviceType = navigator.userAgent.toLowerCase();
-
-    //OS,ブラウザを変数に
-    var uaIe = [/(msie|MSIE)/, /(T|t)rident/];
-
-    //クラス名を変数に
-    var browserClass = ['ie', 'windows', 'safari', 'chrome', 'firefox', 'ie 10', 'edge', 'android'];
-
-    //スペースを定数に
-    var SPACE = ' ';
-
-    //function
-    var addClassHack = function addClassHack(conditions, className) {
-        if (conditions) {
-            htmlTag.className += SPACE + className;
-        }
-    };
-
-    //android
-    addClassHack(deviceType.indexOf("android") !== -1, browserClass[7]);
-
-    //ie
-    addClassHack(userAgent.match(uaIe[0]) || userAgent.match(uaIe[1]), browserClass[0]);
-
-    //windows
-    addClassHack(platform.indexOf('win') !== -1, browserClass[1]);
-
-    //safari
-    addClassHack(userAgent.indexOf(browserClass[2]) !== -1 && userAgent.indexOf(browserClass[3]) === -1, browserClass[2]);
-
-    //chrome
-    addClassHack(userAgent.indexOf(browserClass[2]) !== -1 && userAgent.indexOf(browserClass[3]) !== -1, browserClass[3]);
-
-    //firefox
-    addClassHack(userAgent.indexOf(browserClass[4]) !== -1, browserClass[4]);
-
-    //ie10
-    addClassHack(userAgent.indexOf(browserClass[5]) !== -1, 'ie10');
-
-    //edge
-    addClassHack(userAgent.indexOf(browserClass[6]) !== -1, browserClass[6]);
-}
-
-/***/ }),
-/* 6 */,
-/* 7 */
+/* 4 */,
+/* 5 */,
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10798,121 +10718,56 @@ function browserHack() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__constants__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__constants___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__constants__);
-/* harmony export (immutable) */ __webpack_exports__["a"] = search;
+/* harmony export (immutable) */ __webpack_exports__["a"] = loader;
 
 
 
-function search() {
-  var $trigger = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.js-header-search-trigger'),
-      $input = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.js-header-search-input');
+function loader() {
 
-  $trigger.on('click', function (e) {
-    e.preventDefault();
-    $input.toggleClass(__WEBPACK_IMPORTED_MODULE_1__constants___default.a.ACTIVE_CLASS);
-    $input.focus();
-  });
+  var $loader = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.js-loader'),
+      $svg = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.js-loader-logo');
 
-  $input.on('focusout', function () {
+  if (!sessionStorage.getItem('visited')) {
+
     setTimeout(function () {
-      $input.removeClass(__WEBPACK_IMPORTED_MODULE_1__constants___default.a.ACTIVE_CLASS);
-    }, 100);
-  });
-}
+      $loader.addClass(__WEBPACK_IMPORTED_MODULE_1__constants___default.a.HIDDEN_CLASS);
+    }, 6000);
 
-/***/ }),
-/* 8 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__constants__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__constants___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__constants__);
-/* harmony export (immutable) */ __webpack_exports__["a"] = snsSlide;
-
-
-
-function snsSlide() {
-  var $snsContainer = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.js-sns-slide'),
-      $footer = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.js-footer');
-
-  __WEBPACK_IMPORTED_MODULE_1__constants___default.a.$window.on('load resize', function () {
-    if (__WEBPACK_IMPORTED_MODULE_1__constants___default.a.$window.width() < 1425 && __WEBPACK_IMPORTED_MODULE_1__constants___default.a.$window.width() > 767) {
-      $snsContainer.addClass(__WEBPACK_IMPORTED_MODULE_1__constants___default.a.SLIDE_CLASS);
-      $footer.addClass(__WEBPACK_IMPORTED_MODULE_1__constants___default.a.SLIDE_CLASS);
-    } else {
-      $snsContainer.removeClass(__WEBPACK_IMPORTED_MODULE_1__constants___default.a.SLIDE_CLASS);
-      $footer.removeClass(__WEBPACK_IMPORTED_MODULE_1__constants___default.a.SLIDE_CLASS);
+    try {
+      sessionStorage.setItem('visited', true);
+    } catch (e) {
+      console.error(e);
     }
-  });
+
+    // Need strokes on svg
+    // $svg.find('path').each((index, val) => {
+    //   let path = val;
+
+    //   $(path).css(
+    //     {
+    //       'stroke-dasharray': length,
+    //       'stroke-dashoffset': length,
+    //       'animation': 'trace 1.2s linear forwards, traceFadeOut 0.2s linear 3.9s forwards'
+    //     }
+    //   ).delay(4400).queue(() => {
+    //     $loader.addClass(CONST.HIDDEN_CLASS);
+    //   });
+    // });
+  } else {
+    $loader.addClass(__WEBPACK_IMPORTED_MODULE_1__constants___default.a.FADEOUT_CLASS);
+  }
 }
 
 /***/ }),
-/* 9 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__constants__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__constants___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__constants__);
-/* harmony export (immutable) */ __webpack_exports__["a"] = stickyHeader;
-
-
-
-function stickyHeader() {
-  var offset = 500,
-      stickyTrigger = __WEBPACK_IMPORTED_MODULE_1__constants___default.a.$window.innerHeight() / 2 + offset;
-
-  __WEBPACK_IMPORTED_MODULE_1__constants___default.a.$window.on('scroll', function () {
-
-    var $header = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#js-header'),
-        windowScrollTop = __WEBPACK_IMPORTED_MODULE_1__constants___default.a.$window.scrollTop();
-
-    if (windowScrollTop >= 95) {
-      $header.addClass(__WEBPACK_IMPORTED_MODULE_1__constants___default.a.STICKY_CLASS);
-    } else {
-      $header.removeClass(__WEBPACK_IMPORTED_MODULE_1__constants___default.a.STICKY_CLASS);
-    }
-  });
-}
-
-/***/ }),
-/* 10 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__constants__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__constants___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__constants__);
-/* harmony export (immutable) */ __webpack_exports__["a"] = triggerMenu;
-
-
-
-function triggerMenu() {
-  var $trigger = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.js-trigger-menu'),
-      $menu = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.js-menu');
-
-  $trigger.on('click', function () {
-    $trigger.toggleClass(__WEBPACK_IMPORTED_MODULE_1__constants___default.a.ACTIVE_CLASS);
-    $menu.toggleClass(__WEBPACK_IMPORTED_MODULE_1__constants___default.a.ACTIVE_CLASS);
-
-    // Don't allow scrolling of body if menu is open
-    if ($menu.hasClass(__WEBPACK_IMPORTED_MODULE_1__constants___default.a.ACTIVE_CLASS)) {
-      __WEBPACK_IMPORTED_MODULE_1__constants___default.a.$htmlBody.css('overflow', 'hidden');
-    } else {
-      __WEBPACK_IMPORTED_MODULE_1__constants___default.a.$htmlBody.css('overflow', 'scroll');
-    }
-  });
-}
-
-/***/ }),
-/* 11 */
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(2);
-module.exports = __webpack_require__(4);
+module.exports = __webpack_require__(3);
 
 
 /***/ })

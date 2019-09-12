@@ -50,6 +50,8 @@
 </head>
 
 <body <?php body_class(); ?>>
+  <?php if ( is_front_page() ) { ?>
   <div class="loader js-loader">
     <img src="<?php echo IMAGE_URI; ?>loader.svg" alt="Loader Image">
   </div>
+  <?php } ?>

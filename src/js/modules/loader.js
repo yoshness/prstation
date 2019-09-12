@@ -10,7 +10,7 @@ export default function loader() {
 
     setTimeout(() => {
       $loader.addClass(CONST.HIDDEN_CLASS);
-    }, 9000);
+    }, 6000);
 
     try {
       sessionStorage.setItem('visited', true);
