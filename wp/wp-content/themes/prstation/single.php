@@ -37,7 +37,7 @@ get_header(); ?>
         </li>
       </ul>
     </div>
-    <section class="l-single__content">
+    <section class="l-single__content js-single-article">
       <div class="l-single__top">
       	<span class="l-single__top-category"><?php echo $mainCategoryName; ?></span>
         <?php $title = str_replace("　", "<br>", get_the_title()); ?>

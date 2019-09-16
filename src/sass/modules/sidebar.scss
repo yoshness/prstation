@@ -1,12 +1,32 @@
 .sidebar {
+  position: relative;
+  top: 0;
+
   width: 295px;
-  margin-left: 5px;
   margin-top: 10px;
+  margin-left: 5px;
+
+  transition: top .35s $easing;
 
   @include max-screen($breakpoint-mobile) {
     width: 100%;
-    margin-left: 0;
     margin-top: 0;
+    margin-left: 0;
+  }
+
+  // STATES
+  &.is-fixed {
+    position: fixed;
+    top: 145px;
+
+    width: 295px;
+  }
+  &.is-sticky {
+    position: absolute;
+    top: auto;
+    bottom: 5%;
+
+    width: 295px;
   }
 }
 

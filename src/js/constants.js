@@ -2,6 +2,7 @@ const $ = require('jquery');
 
 module.exports = {
   STICKY_CLASS: 'is-sticky',
+  FIXED_CLASS: 'is-fixed',
   ACTIVE_CLASS: 'is-active',
   HIDDEN_CLASS: 'is-hidden',
   FADEOUT_CLASS: 'is-fadeout',
