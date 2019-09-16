@@ -23,22 +23,22 @@ get_header(); ?>
     <?php include( locate_template( 'template-parts/breadcrumbs.php', false, false ) ); ?>
   </div>
   <div class="l-single__inner l-container js-sns-slide">
+    <div class="l-single__sns sns">
+      <ul class="sns__list">
+        <li class="sns__list-item">
+          <a data-type="facebook" href="http://www.facebook.com/share.php?u=<?php echo urlencode(get_the_permalink()); ?>" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;">
+            <i class="icon icon-facebook-round"></i>
+          </a>
+        </li>
+        <li class="sns__list-item">
+          <a data-type="twitter" href="https://twitter.com/intent/tweet?url=<?php echo urlencode(get_the_permalink()); ?>&amp;text=<?php echo urlencode(get_the_title()); ?>">
+            <i class="icon icon-twitter"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
     <section class="l-single__content">
       <div class="l-single__top">
-        <div class="l-single__top-sns sns">
-          <ul class="sns__list">
-            <li class="sns__list-item">
-              <a data-type="facebook" href="http://www.facebook.com/share.php?u=<?php echo urlencode(get_the_permalink()); ?>" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;">
-                <i class="icon icon-facebook-round"></i>
-              </a>
-            </li>
-            <li class="sns__list-item">
-              <a data-type="twitter" href="https://twitter.com/intent/tweet?url=<?php echo urlencode(get_the_permalink()); ?>&amp;text=<?php echo urlencode(get_the_title()); ?>">
-                <i class="icon icon-twitter"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
       	<span class="l-single__top-category"><?php echo $mainCategoryName; ?></span>
         <?php $title = str_replace("　", "<br>", get_the_title()); ?>
       	<h1 class="l-single__top-title"><?php echo $title; ?></h1>

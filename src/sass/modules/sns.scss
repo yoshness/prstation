@@ -10,7 +10,7 @@
   left: -110px;
 
   @include max-screen($breakpoint-mobile) {
-    top: 52px;
+    top: 22px;
     right: 0;
     left: auto;
   }

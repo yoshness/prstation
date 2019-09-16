@@ -10,15 +10,16 @@
 
 .l-single__inner {
   display: flex;
+  left: 0;
 
-  transition: transform $duration $easing;
+  transition: left $duration $easing;
 
   @include max-screen($breakpoint-mobile) {
     display: block;
   }
 
   &.is-slide {
-    transform: translateX(105px);
+    left: 105px;
   }
 }
 
@@ -55,8 +56,12 @@
   }
 }
 
-.l-single__top-sns {
+.l-single__sns {
+  position: fixed;
 
+  @include max-screen($breakpoint-mobile) {
+    position: relative;
+  }
 }
 
 .l-single__top-category {
