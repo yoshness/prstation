@@ -28,6 +28,7 @@ function get_thumbnail_data( $image_id, $thumbnail = "full", $noimage = false ) 
 function my_acf_options_page_settings( $settings )
 {
     $settings['menu'] = 'Featured Posts';
+    $settings['capability'] = 'edit_themes';
     return $settings;
 }
  

@@ -31,7 +31,7 @@ get_header(); ?>
           </a>
         </li>
         <li class="sns__list-item">
-          <a data-type="twitter" href="https://twitter.com/intent/tweet?url=<?php echo urlencode(get_the_permalink()); ?>&amp;text=<?php echo urlencode(get_the_title()); ?>">
+          <a data-type="twitter" target="_blank" href="https://twitter.com/intent/tweet?url=<?php echo urlencode(get_the_permalink()); ?>&amp;text=<?php echo urlencode(get_the_title()); ?>">
             <i class="icon icon-twitter"></i>
           </a>
         </li>
