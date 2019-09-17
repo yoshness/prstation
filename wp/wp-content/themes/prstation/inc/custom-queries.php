@@ -29,6 +29,7 @@
       'posts_per_page' => 10,
       'order'          => 'DESC',
       'post_status'    => 'publish',
+      'paged'=> get_query_var('paged')
     );
 
     return new WP_Query( $args );

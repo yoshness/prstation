@@ -63,6 +63,35 @@
   text-align: center;
 
   margin-top: 20px;
+
+  .wp-pagenavi {
+    span, a {
+      border-color: $color-linkblue;
+
+      padding: 11px 13px;
+
+      color: $color-primary;
+
+      transition: background-color $duration $easing,
+                  color $duration $easing;
+
+      @include max-screen($breakpoint-mobile) {
+        padding: 6px 10px;
+
+        font-size: 12px;
+      }
+
+      &:hover, &.current {
+        border-color: $color-linkblue;
+        background-color: $color-linkblue;
+
+        color: $color-white;
+      }
+      &:visited {
+        color: $color-primary;
+      }
+    }
+  }
 }
 
 .articles__more-button {

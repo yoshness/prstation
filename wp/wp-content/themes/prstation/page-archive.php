@@ -46,11 +46,16 @@ get_header(); ?>
               </article>
             </a>
           </li>
-          <?php endwhile; wp_reset_query();?>
+          <?php endwhile; wp_reset_query(); ?>
         </ul>
         <?php } ?>
         <div class="articles__more">
-          <a class="articles__more-button" href="#">View More</a>
+          <?php if ( function_exists('wp_pagenavi') ) : ?>
+            <div class="pagenavi">
+              <?php wp_pagenavi( array( 'query' => $article_query['custom_query'] ) ); ?>
+            </div>
+          <?php endif; wp_reset_postdata(); ?>
+          <!-- <a class="articles__more-button" href="#">View More</a> -->
         </div>
       </section>
     </div>
